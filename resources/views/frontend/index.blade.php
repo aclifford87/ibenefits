@@ -10,7 +10,7 @@
                     <i class="fas fa-home"></i> {{ __('navs.general.home') }}
                 </div>
                 <div class="card-body">
-                    {{ __('strings.frontend.welcome_to', ['place' => app_name()]) }}
+                    {{--{{ __('strings.frontend.welcome_to', ['place' => app_name()]) }}--}}
                 </div>
             </div><!--card-->
         </div><!--col-->
