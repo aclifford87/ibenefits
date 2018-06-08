@@ -15,7 +15,7 @@ Route::get('lang/{lang}', 'LanguageController');
 Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     include_route_files(__DIR__.'/frontend/');
 
-    Route::get('shop', 'ShopController@index')->name('shop');
+    Route::get('shop', 'ShopController@shop')->name('shop');
 });
 
 /*

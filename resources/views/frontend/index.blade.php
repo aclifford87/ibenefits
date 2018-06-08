@@ -184,7 +184,9 @@
 
         </div><!-- /.container -->
     </main>
+<<<<<<< HEAD
 
-
->>>>>>> master
+=======
+    
+>>>>>>> a127c9a450a6f13449d23db1cc4cc8588a811059
 @endsection
