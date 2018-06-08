@@ -21,15 +21,18 @@
         {{ style(mix('css/frontend.css')) }}
 
         @stack('after-styles')
+        <!-- Custom styles for this template -->
+        <link href="css/carousel.css" rel="stylesheet">
     </head>
     <body>
         <div id="app">
             @include('includes.partials.logged-in-as')
             @include('frontend.includes.nav')
 
-            <div class="container">
+            <div class="">
                 @include('includes.partials.messages')
                 @yield('content')
+                @include('frontend.includes.footer')
             </div><!-- container -->
         </div><!-- #app -->
 
