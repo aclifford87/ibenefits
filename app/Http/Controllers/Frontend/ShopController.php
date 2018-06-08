@@ -6,7 +6,8 @@ use App\Http\Controllers\Controller;
 
 class ShopController extends Controller
 {
-    function index(){
-        return view('frontend.shop.index');
+    function shop(){
+        //get all products and services
+        return view('frontend.shop.products');
     }
 }
