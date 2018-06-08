@@ -184,13 +184,5 @@
 
         </div><!-- /.container -->
     </main>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> a127c9a450a6f13449d23db1cc4cc8588a811059
-=======
-    
->>>>>>> a127c9a450a6f13449d23db1cc4cc8588a811059
 @endsection
