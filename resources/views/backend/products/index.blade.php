@@ -3,58 +3,43 @@
 @section('title', app_name() . ' | ' . __('strings.backend.dashboard.title'))
 
 @section('content')
+    <h3>Add a Product</h3>
     <form>
         <div class="form-group row">
-            <label for="inputEmail3" class="col-sm-2 col-form-label">Product Name</label>
+            <label for="name" class="col-sm-2 col-form-label">Product Name</label>
             <div class="col-sm-10">
                 <input type="text" class="form-control" id="name" placeholder="Product Name">
             </div>
         </div>
         <div class="form-group row">
-            <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+            <label for="name" class="col-sm-2 col-form-label">Product Price</label>
             <div class="col-sm-10">
-                <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                <input type="text" class="form-control" id="price" placeholder="Product Price">
             </div>
         </div>
-        <fieldset class="form-group">
-            <div class="row">
-                <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
-                <div class="col-sm-10">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-                        <label class="form-check-label" for="gridRadios1">
-                            First radio
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                        <label class="form-check-label" for="gridRadios2">
-                            Second radio
-                        </label>
-                    </div>
-                    <div class="form-check disabled">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
-                        <label class="form-check-label" for="gridRadios3">
-                            Third disabled radio
-                        </label>
-                    </div>
-                </div>
-            </div>
-        </fieldset>
         <div class="form-group row">
-            <div class="col-sm-2">Checkbox</div>
+            <label for="description" class="col-sm-2 col-form-label">Description</label>
+            <div class="col-sm-10">
+                <textarea class="form-control" rows="10" cols="100" name="description"></textarea>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-2">Visible on Page?</div>
             <div class="col-sm-10">
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck1">
-                    <label class="form-check-label" for="gridCheck1">
-                        Example checkbox
-                    </label>
+                    <input class="form-check-input" type="checkbox" id="visible">
                 </div>
             </div>
         </div>
         <div class="form-group row">
+            <div class="col-sm-2">Upload Image</div>
             <div class="col-sm-10">
-                <button type="submit" class="btn btn-primary">Sign in</button>
+                <input type="file" class="form-control-file" id="image" name="image">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-10">
+                <button type="submit" class="btn btn-primary">Add Product</button>
             </div>
         </div>
     </form>
