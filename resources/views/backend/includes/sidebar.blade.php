@@ -62,8 +62,8 @@
             </li>
 
             {{--Products and Services--}}
-            <li class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern('admin/log-viewer*'), 'open') }}">
-                <a class="nav-link nav-dropdown-toggle {{ active_class(Active::checkUriPattern('admin/log-viewer*')) }}" href="#">
+            <li class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern('admin/products*'), 'open') }}">
+                <a class="nav-link nav-dropdown-toggle {{ active_class(Active::checkUriPattern('admin/products*')) }}" href="#">
                     <i class="icon-bag"></i> Shop
                 </a>
 
@@ -74,7 +74,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ active_class(Active::checkUriPattern('admin/log-viewer/logs*')) }}" href="{{ route('log-viewer::logs.list') }}">
+                        <a class="nav-link {{ active_class(Active::checkUriPattern('admin/services*')) }}" href="{{ route('log-viewer::logs.list') }}">
                             Services
                         </a>
                     </li>
