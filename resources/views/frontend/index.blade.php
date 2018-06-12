@@ -126,7 +126,7 @@
 
             <!-- START OF FEATURE OPTION LISTS 2 -->
 
-            <div class="card-group pt-3">
+            <div class="card-group pt-3 pb-5">
                 <div class="card">
                     <div class="card-header text-center bg-dark text-white">
                         MOST POPULAR

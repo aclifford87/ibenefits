@@ -23,9 +23,9 @@
             <p>Submit a Dispute</br>Policies & Rules Get</br>Paid for Your Feedback</p>
             </div>
 
-            <div class="row col-xl-12">
-                <div class="col-8">&copy; Copyright 2018 Growth Partners PLC &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a> &middot; <a href="#">Back to top</a></div>
-                <div class="col-4 pl-lg-3 float-right"><i class="fab fa-facebook-f fa-lg"></i> <i class="fab fa-twitter fa-lg w-5"></i> <i class="fab fa-instagram fa-lg w-5"></i></div>
+            <div class="row col-12">
+                <div class="col-10">&copy; Copyright 2018 Growth Partners PLC &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a> &middot; <a href="#">Back to top</a></div>
+                <div class="col-2 pl-lg-3 float-right"><i class="fab fa-facebook-f fa-lg"></i> <i class="fab fa-twitter fa-lg w-5"></i> <i class="fab fa-instagram fa-lg w-5"></i></div>
             </div>
 
         </div>
