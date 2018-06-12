@@ -32,6 +32,9 @@ return [
         'products' => [
             'title'   => 'Products',
             'welcome' => 'Welcome',
+                'add_product' => [
+                    'title'   => 'Add Product',
+                ]
         ],
 
         'general' => [
