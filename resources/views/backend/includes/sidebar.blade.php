@@ -61,21 +61,21 @@
                 </ul>
             </li>
 
-            {{--Products and Services--}}
+            {{--Products--}}
             <li class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern('admin/products*'), 'open') }}">
                 <a class="nav-link nav-dropdown-toggle {{ active_class(Active::checkUriPattern('admin/products*')) }}" href="#">
-                    <i class="icon-bag"></i> Shop
+                    <i class="icon-bag"></i> Products
                 </a>
 
                 <ul class="nav-dropdown-items">
                     <li class="nav-item">
                         <a class="nav-link {{ active_class(Active::checkUriPattern('admin/products')) }}" href="{{ route('admin.products') }}">
-                            Products
+                            Product List
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ active_class(Active::checkUriPattern('admin/services*')) }}" href="{{ route('log-viewer::logs.list') }}">
-                            Services
+                        <a class="nav-link {{ active_class(Active::checkUriPattern('admin/products/create')) }}" href="{{ route('admin.addProduct') }}">
+                            Add Products
                         </a>
                     </li>
                 </ul>
