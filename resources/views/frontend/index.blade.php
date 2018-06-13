@@ -4,7 +4,7 @@
 
 @section('content')
     <main role="main">
-        <div id="myCarousel" class="carousel slide h-25" data-ride="carousel">
+        <div id="myCarousel" class="carousel slide h-25 mb-4" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -67,7 +67,7 @@
 
             <!-- Three columns of text below the carousel -->
             <div class="row">
-                <div class="col-lg-4 ">
+                <div class="col-lg-4">
                     <a href="/shop">
                     <img class="rounded-circle float-left" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="180" height="180">
                     </a>
@@ -126,7 +126,7 @@
 
             <!-- START OF FEATURE OPTION LISTS 2 -->
 
-            <div class="card-group pt-3 pb-5">
+            <div class="card-group pt-4 pb-5">
                 <div class="card">
                     <div class="card-header text-center bg-dark text-white">
                         MOST POPULAR

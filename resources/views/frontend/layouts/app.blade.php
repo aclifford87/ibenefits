@@ -32,10 +32,10 @@
             <div class="">
                 @include('includes.partials.messages')
                 @yield('content')
-                @include('frontend.includes.footer')
+
             </div><!-- container -->
         </div><!-- #app -->
-
+        @include('frontend.includes.footer')
         <!-- Scripts -->
         @stack('before-scripts')
         {!! script(mix('js/frontend.js')) !!}
