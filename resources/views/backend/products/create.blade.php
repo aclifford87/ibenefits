@@ -9,7 +9,7 @@
         <div class="form-group row">
             <label for="name" class="col-sm-2 col-form-label">Product Name</label>
             <div class="col-sm-10">
-                <input name="name" type="text" class="form-control" id="name" placeholder="Product Name">
+                <input name="name" type="text" class="form-control" id="name" placeholder="Product Name" required>
             </div>
         </div>
         <div class="form-group row">
@@ -21,14 +21,14 @@
         <div class="form-group row">
             <label for="description" class="col-sm-2 col-form-label">Description</label>
             <div class="col-sm-10">
-                <textarea class="form-control" rows="10" cols="100" name="description"></textarea>
+                <textarea class="form-control" rows="10" cols="100" name="description" required></textarea>
             </div>
         </div>
         <div class="form-group row">
             <div class="col-sm-2">Visible on Page?</div>
             <div class="col-sm-10">
                 <div class="form-check">
-                    <input name="visible" class="form-check-input" type="checkbox" id="visible">
+                    <input name="visible" class="form-check-input" type="checkbox" id="visible" value="1">
                 </div>
             </div>
         </div>

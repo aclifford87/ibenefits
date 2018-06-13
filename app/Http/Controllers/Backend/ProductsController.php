@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Models\Shop\Products;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 
 
 /**
@@ -27,9 +28,25 @@ class ProductsController extends Controller
 
     public function store(Request $request)
     {
-        $path = $request->file('avatar')->store('avatars');
 
-        return $path;
-        return $request;
+        If(Input::hasFile('image')){
+            $file = Input::file('image');
+            $destinationPath = '/product_images/';
+            $filename = $file->getClientOriginalName();
+            $file->move($destinationPath, $filename);
+
+            $product = Products::create([
+                'image_url' => $destinationPath . $filename,
+                'name' => $request->input('name'),
+                'description' => $request->input('description'),
+                'price' => $request->input('price'),
+                'visible' => $request->input('visible'),
+            ]);
+        } else{
+            Products::create($request->all());
+        }
+
+
+
     }
 }
