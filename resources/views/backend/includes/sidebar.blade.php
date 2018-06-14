@@ -69,13 +69,13 @@
 
                 <ul class="nav-dropdown-items">
                     <li class="nav-item">
-                        <a class="nav-link {{ active_class(Active::checkUriPattern('admin/products')) }}" href="{{ route('admin.products') }}">
-                            Product List
+                        <a class="nav-link {{ active_class(Active::checkUriPattern('admin/products')) }}" href="{{ route('admin.products.index') }}">
+                            <i class="icon-list"></i> Product List
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ active_class(Active::checkUriPattern('admin/products/create')) }}" href="{{ route('admin.addProduct') }}">
-                            Add Products
+                        <a class="nav-link {{ active_class(Active::checkUriPattern('admin/products/create')) }}" href="{{ route('admin.products.create') }}">
+                            <i class="icon-plus"></i> Add Products
                         </a>
                     </li>
                 </ul>
