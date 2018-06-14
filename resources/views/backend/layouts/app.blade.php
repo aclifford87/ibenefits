@@ -61,12 +61,12 @@
         $(document).ready( function () {
             var table = $('#products').DataTable( {
                 ajax: {
-                    url: 'products/all'
+                    url: 'all/products'
                     //dataSrc: 'data'
                 },
                 "columns": [
                     { "data": function (data) {
-                            return '<a href="products/edit/'+data.id+'">'+data.name+'</a>'
+                            return '<a href="products/'+data.id+'/edit">'+data.name+'</a>'
                         }, className: "centre"
                     },
                     { "data": function (data) {

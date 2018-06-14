@@ -26,6 +26,12 @@ class ProductsController extends Controller
         return view('backend.products.create');
     }
 
+    public function edit($id)
+    {
+        $product = Products::findOrFail($id);
+        return view('backend.products.edit', compact('product'));
+    }
+
     public function store(Request $request)
     {
 

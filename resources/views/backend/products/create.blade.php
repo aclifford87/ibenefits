@@ -4,7 +4,7 @@
 
 @section('content')
     <h3>Add a Product</h3>
-    <form method="post" enctype="multipart/form-data" action="{{ route('admin.storeProduct') }}">
+    <form method="post" enctype="multipart/form-data" action="{{ route('admin.products.create') }}">
         {{ csrf_field() }}
         <div class="form-group row">
             <label for="name" class="col-sm-2 col-form-label">Product Name</label>
