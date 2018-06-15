@@ -7,9 +7,9 @@ use App\Models\Shop\Products;
 
 class ShopController extends Controller
 {
-    function shop(){
+    function index(){
         //get all products and services
-        return view('frontend.shop.products');
+        return view('frontend.shop.index');
     }
 
     function product(){
