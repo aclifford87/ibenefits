@@ -84,6 +84,14 @@
                             }
                         }, className: "centre"
                     },
+                    { "data": function (data) {
+                            return "<form method='post' action='/admin/products/" + data.id + "'>" +
+                                    "<input type='hidden' name='_token' value='<?php echo csrf_token(); ?>'>" +
+                                    "<input name=\"_method\" type=\"hidden\" value=\"DELETE\">" +
+                                    "<button type='submit' class='btn btn-danger'>Delete</button>" +
+                                    "</form>"
+                        }, className: "centre"
+                    },
                 ],
                 //select: true
             } );

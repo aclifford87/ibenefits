@@ -33,9 +33,7 @@ class ProductsController extends Controller
     }
 
     public function update(Request $request, $id) {
-
         $product = Products::find($id);
-
         If(Input::hasFile('image_url')) {
             $file = Input::file('image_url');
             $destinationPath = '/product_images/';
@@ -52,6 +50,7 @@ class ProductsController extends Controller
             $input = $request->except('image_url');
             $product->update($input);
         }
+        return redirect(route('admin.products.index'))->withFlashSuccess('The product was successfully edited.');
 
     }
 
@@ -73,5 +72,12 @@ class ProductsController extends Controller
         } else{
             Products::create($request->all());
         }
+        return redirect(route('admin.products.index'))->withFlashSuccess('The product was successfully added.');
+    }
+
+    function destroy($id){
+        $product = Products::findOrFail($id);
+        $product->delete();
+        return redirect(route('admin.products.index'))->withFlashSuccess('The product was successfully deleted.');
     }
 }
