@@ -4,39 +4,34 @@
 
 @section('content')
     <h3>Edit Product</h3>
-    <form method="post" enctype="multipart/form-data" action="">
+    {{--<form method="patch" enctype="multipart/form-data" action="{{ route('admin.products.update', $product->id) }}">--}}
+        {{ Form::model($product, ['route' => ['admin.products.update', $product->id], 'class' => '',
+         'method' => 'PATCH', 'files' => true]) }}
         {{ csrf_field() }}
+        <input name="id" type="text" id="id" hidden>
         <div class="form-group row">
             <label for="name" class="col-sm-2 col-form-label">Product Name</label>
             <div class="col-sm-10">
-                <input name="name" type="text"
-                       class="form-control" id="name"
-                       value="{{ $product->name }}" required>
+                {{ Form::text('name', null, ['class' => 'form-control']) }}
             </div>
         </div>
         <div class="form-group row">
             <label for="price" class="col-sm-2 col-form-label">Product Price</label>
             <div class="col-sm-10">
-                <input name="price" type="text"
-                       class="form-control" id="price"
-                       placeholder="{{ $product->price }}" required>
+                {{ Form::text('price', null, ['class' => 'form-control']) }}
             </div>
         </div>
         <div class="form-group row">
             <label for="description" class="col-sm-2 col-form-label">Description</label>
             <div class="col-sm-10">
-                <textarea class="form-control" rows="10" cols="100" name="description" required>
-                    {{ $product->description }}
-                </textarea>
+                {{ Form::textarea('description') }}
             </div>
         </div>
         <div class="form-group row">
             <div class="col-sm-2">Visible on Page?</div>
             <div class="col-sm-10">
                 <div class="form-check">
-                    <input name="visible" type="checkbox"
-                           class="form-check-input" id="visible" value="{{ $product->visible }}"
-                    <?php if ($product->visible == 1) { echo "checked='checked'"; } ?>>
+                    {{ Form::checkbox('visible', 1) }}
                 </div>
             </div>
         </div>
@@ -44,7 +39,7 @@
             <div class="col-sm-2">Uploaded Image</div>
             <img src="{{ $product->image_url }}" height="40">
             <div class="col-sm-10">
-                <input name="image" type="file" class="form-control-file" id="image">
+                <input name="image_url" type="file" class="form-control-file" id="image">
             </div>
         </div>
         <div class="form-group row">

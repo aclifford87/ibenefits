@@ -177,7 +177,9 @@ return [
         App\Providers\ObserverServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 //        Shopping Cart
-        Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class
+        Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
+//        Forms
+        Collective\Html\HtmlServiceProvider::class,
 
     ],
 
@@ -236,6 +238,9 @@ return [
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
 
         'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
+
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
 
     ],
 

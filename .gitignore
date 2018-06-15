@@ -21,6 +21,7 @@ Thumbs.db
 _ide_helper.php
 .phpstorm.meta.php
 composer.phar
+composer.*
 error.log
 output.txt
 /.vscode
