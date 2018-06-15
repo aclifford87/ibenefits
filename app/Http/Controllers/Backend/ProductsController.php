@@ -32,12 +32,33 @@ class ProductsController extends Controller
         return view('backend.products.edit', compact('product'));
     }
 
+    public function update(Request $request, $id) {
+        $product = Products::find($id);
+        If(Input::hasFile('image_url')) {
+            $file = Input::file('image_url');
+            $destinationPath = '/product_images/';
+            $filename = $file->getClientOriginalName();
+            $file->move($destinationPath, $filename);
+            $product->update([
+                'image_url' => $destinationPath . $filename,
+                'name' => $request->input('name'),
+                'description' => $request->input('description'),
+                'price' => $request->input('price'),
+                'visible' => $request->input('visible'),
+            ]);
+        } else{
+            $input = $request->except('image_url');
+            $product->update($input);
+        }
+        return redirect(route('admin.products.index'))->withFlashSuccess('The product was successfully edited.');
+
+    }
+
     public function store(Request $request)
     {
-
         If(Input::hasFile('image')){
             $file = Input::file('image');
-            $destinationPath = '/product_images/';
+            $destinationPath = 'product_images';
             $filename = $file->getClientOriginalName();
             $file->move($destinationPath, $filename);
 
@@ -51,8 +72,12 @@ class ProductsController extends Controller
         } else{
             Products::create($request->all());
         }
+        return redirect(route('admin.products.index'))->withFlashSuccess('The product was successfully added.');
+    }
 
-
-
+    function destroy($id){
+        $product = Products::findOrFail($id);
+        $product->delete();
+        return redirect(route('admin.products.index'))->withFlashSuccess('The product was successfully deleted.');
     }
 }
