@@ -9,11 +9,11 @@ class ShopController extends Controller
 {
     function index(){
         //get all products and services
-        return view('frontend.shop.index');
+        $products = Products::all();
+        return view('frontend.shop.index', compact('products'));
     }
 
     function product(){
-
         return view('frontend.shop.product');
     }
 }
