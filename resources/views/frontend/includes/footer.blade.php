@@ -1,7 +1,6 @@
 <!-- FOOTER -->
 <footer class="footer-fixed" >
     <div class="w-auto p-5 mb-1 bg-light text-dark font-weight-light">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
         <div class="row offset-xl-1 offset-md-1 pl-3 pr-3">
             <div class="col-md-3">
             <h6><u>Customer service</u></h6></br>
