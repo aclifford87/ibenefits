@@ -1,7 +1,7 @@
 <header>
 {{--<nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">--}}
 <nav class="navbar navbar-expand-md navbar-light fixed-top bg-white">
-    <a href="{{ route('frontend.index') }}" class="navbar-brand"><img height="100px" src="img/frontend/logo_horiz.png"></a>
+    <a href="{{ route('frontend.index') }}" class="navbar-brand"><img height="100px" src="/img/frontend/logo_horiz.png"></a>
 
     <button class="navbar-toggler navbar-toggler-right" type="button"
             data-toggle="collapse" data-target="#navbarSupportedContent"
