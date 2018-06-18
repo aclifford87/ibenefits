@@ -16,4 +16,8 @@ class ShopController extends Controller
     function product(){
         return view('frontend.shop.product');
     }
+
+    function cart(){
+        return view('frontend.shop.cart');
+    }
 }

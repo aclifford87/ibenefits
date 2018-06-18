@@ -40,7 +40,7 @@
 
                     <button type="button" class="btn btn-secondary w-75 btn-lg pl-5 pr-5">Add to Cart</button>
 
-                    <div class="col-md-12 mt-3 mr-5">
+                    <div class="col-md-12 mt-3">
                         <div class="card flex-md-row">
                             <div class="card-body d-flex flex-column">
                                 <h3 class="mb-2">
