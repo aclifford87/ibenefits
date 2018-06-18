@@ -18,6 +18,12 @@ class CreateProductsTable extends Migration
             $table->text('name');
             $table->text('description');
             $table->string('image_url')->nullable();
+            $table->string('link_1')->nullable();
+            $table->string('link_2')->nullable();
+            $table->string('link_3')->nullable();
+            $table->string('link_1_display')->nullable();
+            $table->string('link_2_display')->nullable();
+            $table->string('link_3_display')->nullable();
             $table->float('price');
             $table->boolean('visible');
             $table->timestamps();

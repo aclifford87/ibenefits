@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use App\Models\Shop\Products;
+use Gloudemans\Shoppingcart\Facades\Cart;
 
 class ShopController extends Controller
 {
@@ -13,8 +15,16 @@ class ShopController extends Controller
         return view('frontend.shop.index', compact('products'));
     }
 
-    function product(){
-        return view('frontend.shop.product');
+    function product($id){
+        $product = Products::findOrFail($id);
+        return view('frontend.shop.product', compact('product'));
+    }
+
+    function add_cart(){
+        Cart::add('293ad', 'Product 1', 1, 9.99);
+        Cart::store(Auth::user()->email);
+        return Cart::tax();
+        return Cart::content();
     }
 
     function cart(){

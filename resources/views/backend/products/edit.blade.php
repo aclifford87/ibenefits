@@ -48,6 +48,38 @@
                 <input name="image_url" type="file" class="form-control-file" id="image">
             </div>
         </div>
+
+        <div class="form-group row">
+            <div class="col-sm-2">Link URL</div>
+            <div class="col-sm-4">
+                {{ Form::text('link_1', null, ['class' => 'form-control']) }}
+            </div>
+            <div class="col-sm-1">Link Display</div>
+            <div class="col-sm-5">
+                {{ Form::text('link_1_display', null, ['class' => 'form-control']) }}
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-2">Link URL</div>
+            <div class="col-sm-4">
+                {{ Form::text('link_2', null, ['class' => 'form-control']) }}
+            </div>
+            <div class="col-sm-1">Link Display</div>
+            <div class="col-sm-5">
+                {{ Form::text('link_2_display', null, ['class' => 'form-control']) }}
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-2">Link URL</div>
+            <div class="col-sm-4">
+                {{ Form::text('link_3', null, ['class' => 'form-control']) }}
+            </div>
+            <div class="col-sm-1">Link Display</div>
+            <div class="col-sm-5">
+                {{ Form::text('link_3_display', null, ['class' => 'form-control']) }}
+            </div>
+        </div>
+
         <div class="form-group row">
             <div class="col-sm-10">
                 <button type="submit" class="btn btn-primary">Save Product</button>
