@@ -28,10 +28,16 @@
             </div>
         </div>
         <div class="form-group row">
-            <div class="col-sm-2">Visible on Page?</div>
+            <div class="col-sm-2">Visible on Page</div>
             <div class="col-sm-10">
                 <div class="form-check">
-                    {{ Form::checkbox('visible', 1) }}
+                    {{ Form::radio('visible', 1) }}
+                </div>
+            </div>
+            <div class="col-sm-2">Not Visible on Page</div>
+            <div class="col-sm-10">
+                <div class="form-check">
+                    {{ Form::radio('visible', 0) }}
                 </div>
             </div>
         </div>

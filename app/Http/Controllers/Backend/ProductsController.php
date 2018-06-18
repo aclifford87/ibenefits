@@ -36,11 +36,12 @@ class ProductsController extends Controller
         $product = Products::find($id);
         If(Input::hasFile('image_url')) {
             $file = Input::file('image_url');
-            $destinationPath = '/product_images/';
+            $destinationPath = 'product_images';
             $filename = $file->getClientOriginalName();
             $file->move($destinationPath, $filename);
+
             $product->update([
-                'image_url' => $destinationPath . $filename,
+                'image_url' => '/' . $destinationPath . '/' . $filename,
                 'name' => $request->input('name'),
                 'description' => $request->input('description'),
                 'price' => $request->input('price'),
