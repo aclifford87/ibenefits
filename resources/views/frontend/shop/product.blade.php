@@ -7,7 +7,7 @@
         <div class="container pt-5 mt-lg-5">
             <hr class="featurette-divider">
             <h2 class="featurette-heading"><u>iBenefits Product</u></h2>
-            <div class="row pt-5 mt-3 mb-5">
+            <div class="row pt-5 mt-3 mb-5 ml-2">
                 <div class="col">
                     <img class="card-img-right flex-auto d-none d-lg-block" data-src="holder.js/200x250?theme=thumb"
                          alt="Thumbnail [200x250]" style="width: 400px; height: 400px;"
@@ -34,18 +34,19 @@
                             <button type="button" class="button hollow circle" data-quantity="plus" data-field="quantity">
                                 <i class="fa fa-plus" aria-hidden="true"></i>
                             </button>
+
                         </div>
                     </div>
 
                     <button type="button" class="btn btn-secondary w-75 btn-lg pl-5 pr-5">Add to Cart</button>
 
-                    <div class="col-md-12 mt-3">
+                    <div class="col-md-12 mt-3 mr-5">
                         <div class="card flex-md-row">
                             <div class="card-body d-flex flex-column">
                                 <h3 class="mb-2">
-                                    <a class="text-dark" >Product Description</a>
+                                    <a class="text-dark">Product Description</a>
                                 </h3>
-                                <p class="card-text mb-auto">Phasellus mollis magna eget mi sollicitudin, scelerisque posuere lorem tempor. Donec sodales lorem eget ex bibendum dapibus. Praesent nec posuere neque. Sed elementum viverra sapien a molestie. Mauris gravida justo a odio eleifend luctus. Ut tincidunt orci sit amet convallis sagittis. Mauris sed tellus fermentum, volutpat ex at, accumsan metus.</p>
+                                <p class="card-text mb-auto">Phasellus mollis magna eget mi sollicitudin, scelerisque posuere lorem tempor. Donec sodales lorem eget ex bibendum dapibus. Praesent nec posuere neque. Sed elementum viverra sapien a molestie.</p>
                             </div>
                         </div>
                     </div>
