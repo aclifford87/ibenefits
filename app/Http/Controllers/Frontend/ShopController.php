@@ -9,7 +9,7 @@ class ShopController extends Controller
 {
     function index(){
         //get all products and services
-        $products = Products::all();
+        $products = Products::where('visible', 1)->get();
         return view('frontend.shop.index', compact('products'));
     }
 
