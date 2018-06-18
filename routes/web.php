@@ -16,7 +16,8 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     include_route_files(__DIR__.'/frontend/');
 
     Route::get('shop', 'ShopController@index')->name('shopIndex');
-    Route::get('shop/product', 'ShopController@product')->name('product');
+    //Route::get('shop/product', 'ShopController@product')->name('product');
+    Route::get('shop/product/{id}', 'ShopController@product')->name('product');
 });
 
 /*

@@ -42,6 +42,36 @@
             </div>
         </div>
         <div class="form-group row">
+            <div class="col-sm-2">Link URL</div>
+            <div class="col-sm-4">
+                <input name="link_1" type="text" class="form-control-file" id="link_1">
+            </div>
+            <div class="col-sm-1">Link Display</div>
+            <div class="col-sm-5">
+                <input name="link_1_display" type="text" class="form-control-file" id="link_1_display">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-2">Link URL</div>
+            <div class="col-sm-4">
+                <input name="link_2" type="text" class="form-control-file" id="link_2">
+            </div>
+            <div class="col-sm-1">Link Display</div>
+            <div class="col-sm-5">
+                <input name="link_2_display" type="text" class="form-control-file" id="link_2_display">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-2">Link URL</div>
+            <div class="col-sm-4">
+                <input name="link_3" type="text" class="form-control-file" id="link_3">
+            </div>
+            <div class="col-sm-1">Link Display</div>
+            <div class="col-sm-5">
+                <input name="link_3_display" type="text" class="form-control-file" id="link_3_display">
+            </div>
+        </div>
+        <div class="form-group row">
             <div class="col-sm-10">
                 <button type="submit" class="btn btn-primary">Add Product</button>
             </div>

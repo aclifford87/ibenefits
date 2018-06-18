@@ -11,6 +11,13 @@ class Products extends Model
         'description',
         'image_url',
         'price',
-        'visible'
+        'visible',
+        'link_1',
+        'link_2',
+        'link_3',
+        'link_1_display',
+        'link_2_display',
+        'link_3_display'
+
     ];
 }

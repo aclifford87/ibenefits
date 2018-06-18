@@ -13,7 +13,8 @@ class ShopController extends Controller
         return view('frontend.shop.index', compact('products'));
     }
 
-    function product(){
-        return view('frontend.shop.product');
+    function product($id){
+        $product = Products::findOrFail($id);
+        return view('frontend.shop.product', compact('product'));
     }
 }
