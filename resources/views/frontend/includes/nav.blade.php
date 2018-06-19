@@ -53,7 +53,7 @@
             <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
-        <i class="fas fa-shopping-cart fa-2x ml-2 mr-2" style="color:#2e3192"></i>
+        <a href="{{ route('frontend.cart') }}" style="color:#2e3192"><i class="fas fa-shopping-cart fa-2x ml-2 mr-2"></i></a>
     </div>
 </nav>
 </header>
