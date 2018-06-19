@@ -89,7 +89,7 @@
                 <div class="tab-content">
                     <div id="product-info" class="pt-3 tab-pane active">
                     <h3>PRODUCT INFO</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas massa nisl, cursus et diam id, commodo blandit diam. Donec dictum eu purus et suscipit. Nam varius elementum velit, vitae molestie urna convallis at. Praesent gravida, odio non fermentum malesuada, ex orci pretium augue, vel vehicula sapien arcu a quam. Morbi sit amet neque semper, malesuada nisi in, gravida mi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris efficitur gravida eros, ut euismod lectus iaculis nec. Sed et ultrices quam, quis maximus ex. Nam ac ex non metus vestibulum consectetur id eu quam. Sed eleifend metus quis arcu gravida, quis semper odio euismod. Mauris congue tellus id purus ultrices consectetur. Sed euismod a sem sit amet molestie. Praesent sed risus in metus mollis faucibus.</p>
+                    <p>{{ $product->product_info }}</p>
                     </div>
                     <div id="returns" class="pt-3 tab-pane fade">
                     <h3>RETURN AND REFUND POLICY</h3>
