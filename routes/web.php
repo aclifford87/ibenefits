@@ -16,15 +16,15 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     include_route_files(__DIR__.'/frontend/');
 
     Route::get('shop', 'ShopController@index')->name('shopIndex');
-<<<<<<< HEAD
+
     Route::get('shop/product', 'ShopController@product')->name('product');
     Route::get('shop/cart', 'ShopController@product')->name('cart');
 
-=======
+
     //Route::get('shop/product', 'ShopController@product')->name('product');
     Route::get('shop/product/{id}', 'ShopController@product')->name('product');
     Route::get('shop/product/cart/add', 'ShopController@add_cart')->name('add_cart');
->>>>>>> nick
+
 });
 
 /*
