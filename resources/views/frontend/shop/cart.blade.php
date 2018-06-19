@@ -4,12 +4,12 @@
 
 @section('content')
     <main role="main">
-        <div class="container mt-5">
+        <div class="container mt-5 pt-5">
             <!-- START THE FEATURETTES -->
             <hr class="featurette-divider">
             <h2 class="featurette-heading"><u>iBenefits Cart</u></h2>
 
-            <div class="row mb-5 mt-5 pt-5"></div>
+            <div class="row mb-2 mt-5 pt-5"></div>
         </div>
 
 <!-- Shopping cart ---->
