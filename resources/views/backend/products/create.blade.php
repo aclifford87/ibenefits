@@ -27,6 +27,12 @@
                 <textarea class="form-control" rows="10" cols="100" name="description" required></textarea>
             </div>
         </div>
+    <div class="form-group row">
+        <label for="description" class="col-sm-2 col-form-label">Product Information</label>
+        <div class="col-sm-10">
+            <textarea class="form-control" rows="10" cols="100" name="product_info" required></textarea>
+        </div>
+    </div>
         <div class="form-group row">
             <div class="col-sm-2">Visible on Page?</div>
             <div class="col-sm-10">

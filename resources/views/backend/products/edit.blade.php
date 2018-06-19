@@ -22,9 +22,13 @@
             </div>
         </div>
         <div class="form-group row">
-            <label for="description" class="col-sm-2 col-form-label">Description</label>
-            <div class="col-sm-10">
-                {{ Form::textarea('description') }}
+            <div class="col-md-2">Description</div>
+            <div class="col-md-4">
+                {{ Form::textarea('description', null, ['class' => 'form-control']) }}
+            </div>
+            <div class="col-md-1">Product Information</div>
+            <div class="col-md-5">
+                {{ Form::textarea('product_info', null, ['class' => 'form-control']) }}
             </div>
         </div>
         <div class="form-group row">
