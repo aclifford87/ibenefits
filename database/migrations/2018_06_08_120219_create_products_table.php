@@ -25,7 +25,7 @@ class CreateProductsTable extends Migration
             $table->string('link_1_display')->nullable();
             $table->string('link_2_display')->nullable();
             $table->string('link_3_display')->nullable();
-            $table->float('price');
+            $table->float('price', 8, 2);
             $table->boolean('visible');
             $table->timestamps();
         });

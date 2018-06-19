@@ -13,29 +13,21 @@
                     <img src="{{ $product->image_url }}" height="400px" width="400px">
                 </div>
                 <div class="col-sm-6 col-md-6">
+                    {{ Form::open(['route' => 'frontend.addCart', 'method' => 'post']) }}
                     <h3 class="product title mb-1">
                         <a class="text-dark" >{{ $product->name }}</a>
+                        <input name="name" value="{{ $product->name }}" hidden>
+                        <input name="price" value="{{ $product->price }}" hidden>
                     </h3>
 
                     <div class="product-price mt-3 mb-2">£{{ $product->price }}</div>
 
                     <div class="mt-3 mb-3 text-muted pr-2">Quantity
-
-                        {{--<div class="input-group-button ml-2">--}}
-                            {{--<button type="button" class="button hollow circle" data-quantity="minus" data-field="quantity">--}}
-                                {{--<i class="fa fa-minus" aria-hidden="true"></i>--}}
-                            {{--</button>--}}
-                        {{--</div>--}}
-                        <input class="input-group-field" type="number" name="quantity" value="0">
-                        {{--<div class="input-group-button">--}}
-                            {{--<button type="button" class="button hollow circle" data-quantity="plus" data-field="quantity">--}}
-                                {{--<i class="fa fa-plus" aria-hidden="true"></i>--}}
-                            {{--</button>--}}
-                        {{--</div>--}}
+                        <input class="input-group-field" type="number" name="quantity" value="1">
                     </div>
 
-                    <button type="button" class="btn btn-secondary w-100 btn-lg pl-5 pr-5">Add to Cart</button>
-
+                    <button type="submit" class="btn btn-secondary w-100 btn-lg pl-5 pr-5">Add to Cart</button>
+                    {{ Form::close() }}
                     <div class="card flex-md-row mt-3">
                         <div class="card-body d-flex flex-column">
                             <h3 class="mb-2">
