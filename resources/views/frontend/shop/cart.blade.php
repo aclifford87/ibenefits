@@ -20,16 +20,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-md-10 col-md-offset-1">
-<<<<<<< HEAD
-
-
-                    <table class="table table-hover">
-
                     <table class="table">
-
-=======
-                    <table class="table">
->>>>>>> 13361e0fa7390f7faf7156108832bb61a3da8694
                         <thead>
                         <tr>
                             <th><h3>My Cart</h3></th>
