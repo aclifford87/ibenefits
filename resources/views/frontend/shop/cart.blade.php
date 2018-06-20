@@ -8,19 +8,28 @@
             <!-- START THE FEATURETTES -->
             <hr class="featurette-divider">
             <h2 class="featurette-heading"><u>iBenefits Cart</u></h2>
-
-            <div class="row mb-2 mt-5 pt-5"></div>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb bg-white">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/shop">Shop</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Cart</li>
+                </ol>
+            </nav>
         </div>
 
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-md-10 col-md-offset-1">
+<<<<<<< HEAD
 
 
                     <table class="table table-hover">
 
                     <table class="table">
 
+=======
+                    <table class="table">
+>>>>>>> 13361e0fa7390f7faf7156108832bb61a3da8694
                         <thead>
                         <tr>
                             <th><h3>My Cart</h3></th>
@@ -36,17 +45,14 @@
                         <tr>
                             <td class="col-sm-8 col-md-6 pb-5">
                                 <div class="media">
-                                    {{--@foreach($product as $pro)--}}
-                                        <a class="thumbnail pull-left" href="">
-                                            <img class="media-object" src="" style="width: 100px; height: 100px;"> </a>
+                                        <a class="thumbnail pull-left" href="/shop/product/{{ $row->options->product_id }}">
+                                            <img class="media-object" src="{{ $row->options->image_url }}" style="width: 100px; height: 100px;"> </a>
                                         <div class="media-body ml-5">
-                                            <p class="media-heading"><a href="">{{ $row->name }}</a></p>
-                                            <p class="media-heading"><a href="#"><u>Remove</u></a></p>
+                                            <p class="media-heading"><a href="/shop/product/{{ $row->options->product_id }}">{{ $row->name }}</a></p>
+                                            <p class="media-heading"><a href="/shop/cart/remove/{{ $row->rowId }}"><u>Remove</u></a></p>
                                         </div>
-                                    {{--@endforeach--}}
                                 </div>
                             </td>
-
                             <td></td>
                             <td class="col-sm-1 col-md-1" style="text-align: center">
                                 <input type="email" class="form-control" id="exampleInputEmail1" value="{{ $row->qty }}">
