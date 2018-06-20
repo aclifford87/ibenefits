@@ -24,12 +24,23 @@ class ShopController extends Controller
 
     function add_cart(Request $request){
         $product = Products::where('name', $request->input('name'))->get();
-
+        $image_url = "";
+        $id = "";
+        foreach ($product as $prod){
+            $image_url = $prod->image_url;
+            $id = $prod->id;
+        };
         $qty = (int)$request->input('quantity');
         $price = (int)$request->input('price');
-        Cart::add($request->input('name'), $request->input('name'), $qty , $price);
-        //return view('frontend.shop.cart', compact('product'));
+        Cart::add($request->input('name'), $request->input('name'), $qty , $price,
+            ['image_url' => $image_url, 'product_id' => $id]);
+        //return Cart::content();
         return redirect(route('frontend.cart'));
+    }
+
+    function remove_from_cart($rowId){
+        Cart::remove($rowId);
+        return redirect()->back()->withFlashSuccess('The product was successfully edited.');
     }
 
     function cart(){
