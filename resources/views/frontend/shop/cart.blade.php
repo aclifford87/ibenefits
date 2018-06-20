@@ -8,8 +8,13 @@
             <!-- START THE FEATURETTES -->
             <hr class="featurette-divider">
             <h2 class="featurette-heading"><u>iBenefits Cart</u></h2>
-
-            <div class="row mb-2 mt-5 pt-5"></div>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb bg-white">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/shop">Shop</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Cart</li>
+                </ol>
+            </nav>
         </div>
 
 <!-- Shopping cart ---->
