@@ -20,6 +20,7 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     Route::get('shop/product', 'ShopController@product')->name('product');
     Route::get('shop/cart', 'ShopController@cart')->name('cart');
     Route::post('shop/cart', 'ShopController@add_cart')->name('addCart');
+    Route::get('shop/cart/remove/{id}', 'ShopController@remove_from_cart')->name('removeFromCart');
 
 
     //Route::get('shop/product', 'ShopController@product')->name('product');
