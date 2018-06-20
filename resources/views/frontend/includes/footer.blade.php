@@ -4,22 +4,32 @@
         <div class="row offset-xl-1 offset-md-1 pl-3 pr-3">
             <div class="col-md-3">
             <h6><u>Customer service</u></h6></br>
-            <p>Help Center</br>Contact Us</br>Report</br>Abuse</p>
+            <p>Contact Form</p>
             </div>
 
             <div class="col-md-3">
-            <h6><u>About us</u></h6></br>
-            <p>About ibenefits.com</br>About Growth Partners</br>Sitemap</p>
+            <h6><u>Help Center / FAQ </u></h6></br>
+            <p>List with FAQs</p>
             </div>
 
             <div class="col-md-3">
-            <h6><u>Buy on ibenefits.com</u></h6></br>
-            <p>All Categories Request for</br>Quotation Wholesaler Market</p>
+            <h6><u>Policies & Rules</u></h6></br>
+                <p>Policies & Rules Article</br>Shipping Policy Article</br>Sitemap</p>
             </div>
 
             <div class="col-md-3">
-            <h6></h6></br>
-            <p>Submit a Dispute</br>Policies & Rules Get</br>Paid for Your Feedback</p>
+            <h6><u>Report an issue</u></h6></br>
+            <p>Report An Issue Form</p>
+            </div>
+
+            <div class="col-md-3">
+                <h6><u>Get paid for your feedback</u></h6></br>
+                <p>Submit survey</p>
+            </div>
+
+            <div class="col-md-3">
+                <h6><u>Contact us</u></h6></br>
+                <p>Contact form</br>Headquarters</br>Available phone numbers</p>
             </div>
 
             <div class="row col-12 pt-3">
