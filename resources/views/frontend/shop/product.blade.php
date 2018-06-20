@@ -7,8 +7,14 @@
         <div class="container pt-5 mt-lg-5">
             <hr class="featurette-divider">
             <h2 class="featurette-heading"><u>iBenefits Product</u></h2>
-
-            <div class="pt-5 mb-5 row">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb bg-white">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/shop">Shop</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{{ $product->name }}</li>
+                </ol>
+            </nav>
+            <div class="pt-2 mb-5 row">
                 <div class="col-sm-6 col-md-6">
                     <img src="{{ $product->image_url }}" height="400px" width="400px">
                 </div>
