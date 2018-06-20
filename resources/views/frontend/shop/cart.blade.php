@@ -17,7 +17,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-md-10 col-md-offset-1">
-                    <table class="table table-hover">
+                    <table class="table">
                         <thead>
                         <tr>
                             <th><h3>My Cart</h3></th>
@@ -77,7 +77,7 @@
                             <td>   </td>
                             <td>   </td>
                             <td>   </td>
-                            <td><button type="button" class="btn btn-secondary btn-lg pl-5 pr-5">Checkout</button></td>
+                            <td colspan="2"><button type="button" class="btn btn-secondary btn-lg pl-5 pr-5 w-100">Checkout</button></td>
                             <td></td>
                         </tr>
                         </tbody>
