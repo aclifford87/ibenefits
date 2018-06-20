@@ -17,16 +17,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-md-10 col-md-offset-1">
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-                    <table class="table table-hover">
-=======
                     <table class="table">
->>>>>>> Manvir
-=======
-                    <table class="table">
->>>>>>> nick
                         <thead>
                         <tr>
                             <th><h3>My Cart</h3></th>
