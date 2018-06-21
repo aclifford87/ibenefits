@@ -27,7 +27,31 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     Route::get('shop/product/{id}', 'ShopController@product')->name('product');
     Route::get('shop/product/cart/add', 'ShopController@add_cart')->name('add_cart');
 
-    
+    /*
+     * Routes for footer links
+     */
+    Route::get('all/products', function () {
+        return ['data' => \App\Models\Shop\Products::all()];
+    });
+
+    Route::get('all/products', function () {
+        return ['data' => \App\Models\Shop\Products::all()];
+    });
+
+    Route::get('all/products', function () {
+        return ['data' => \App\Models\Shop\Products::all()];
+    });
+
+    Route::get('all/products', function () {
+        return ['data' => \App\Models\Shop\Products::all()];
+    });
+
+    Route::get('all/products', function () {
+        return ['data' => \App\Models\Shop\Products::all()];
+    });
+
+
+
 
 });
 

@@ -3,7 +3,7 @@
 @section('title', app_name() . ' | Contact Us')
 
 @section('content')
-    <div class="row justify-content-center">
+    <div class="row justify-content-center pb-5" style="padding-top: 150px">
         <div class="col col-sm-8 align-self-center">
             <div class="card">
                 <div class="card-header">
