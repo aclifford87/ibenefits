@@ -31,41 +31,49 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
      * Routes for footer links
      */
 
-    Route::get('frontend/contact', function () {
+    Route::get('contact', function () {
         return view('frontend.contact');
-    });
+    })->name('contact');
 
-    Route::get('footer/FAQs', function () {
+    Route::get('FAQs', function () {
         return view('frontend.footer.FAQs');
-    });
+    })->name('FAQs');
 
-    Route::get('footer/headquarters', function () {
+    Route::get('headquarters', function () {
         return view('frontend.footer.headquarters');
-    });
+    })->name('headquarters');
 
-    Route::get('footer/phone-numbers', function () {
+    Route::get('phone-numbers', function () {
         return view('frontend.footer.phone-numbers');
-    });
+    })->name('phone-numbers');
 
-    Route::get('footer/Policies&Rules', function () {
-        return view('frontend.footer.Policies&Rules');
-    });
+    Route::get('policies-rules', function () {
+        return view('frontend.footer.policies-rules');
+    })->name('policies-rules');
 
-    Route::get('footer/Report-An-Issue', function () {
+    Route::get('report-an-issue', function () {
         return view('frontend.footer.Report-An-Issue');
-    });
+    })->name('report-an-issue');
 
-    Route::get('footer/Shipping-Policy', function () {
+    Route::get('shipping-policy', function () {
         return view('frontend.footer.Shipping-Policy');
-    });
+    })->name('shipping-policy');
 
-    Route::get('footer/Survey', function () {
-        return view('frontend.footer.Survey');
-    });
+    Route::get('survey', function () {
+        return view('frontend.footer.survey');
+    })->name('survey');
 
-    Route::get('footer/sitemap', function () {
+    Route::get('sitemap', function () {
         return view('frontend.footer.sitemap');
-    });
+    })->name('sitemap');
+
+    Route::get('privacy', function () {
+        return view('frontend.footer.privacy');
+    })->name('privacy');
+
+    Route::get('terms-condition', function () {
+        return view('frontend.footer.terms-condition');
+    })->name('terms-condition');
 
 });
 
