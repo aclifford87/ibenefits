@@ -17,6 +17,11 @@
             </tr>
 
             <tr>
+                <th>Balance</th>
+                <td>£{{ $user->balance }}</td>
+            </tr>
+
+            <tr>
                 <th>{{ __('labels.backend.access.users.tabs.content.overview.status') }}</th>
                 <td>{!! $user->status_label !!}</td>
             </tr>
