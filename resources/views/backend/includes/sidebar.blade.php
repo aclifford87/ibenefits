@@ -64,7 +64,7 @@
             {{--Products--}}
             <li class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern('admin/products*'), 'open') }}">
                 <a class="nav-link nav-dropdown-toggle {{ active_class(Active::checkUriPattern('admin/products*')) }}" href="#">
-                    <i class="icon-bag"></i> Products
+                    <i class="icon-bag"></i> Category 1
                 </a>
 
                 <ul class="nav-dropdown-items">
@@ -80,6 +80,46 @@
                     </li>
                 </ul>
             </li>
+
+            {{--Products2--}}
+            {{--<li class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern('admin/products*'), 'open') }}">--}}
+                {{--<a class="nav-link nav-dropdown-toggle {{ active_class(Active::checkUriPattern('admin/products*')) }}" href="#">--}}
+                    {{--<i class="icon-bag"></i> Category 2--}}
+                {{--</a>--}}
+
+                {{--<ul class="nav-dropdown-items">--}}
+                    {{--<li class="nav-item">--}}
+                        {{--<a class="nav-link {{ active_class(Active::checkUriPattern('admin/products')) }}" href="{{ route('admin.products.index') }}">--}}
+                            {{--<i class="icon-list"></i> Product List--}}
+                        {{--</a>--}}
+                    {{--</li>--}}
+                    {{--<li class="nav-item">--}}
+                        {{--<a class="nav-link {{ active_class(Active::checkUriPattern('admin/products/create')) }}" href="{{ route('admin.products.create') }}">--}}
+                            {{--<i class="icon-plus"></i> Add Products--}}
+                        {{--</a>--}}
+                    {{--</li>--}}
+                {{--</ul>--}}
+            {{--</li>--}}
+
+            {{--Products3--}}
+            {{--<li class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern('admin/products*'), 'open') }}">--}}
+                {{--<a class="nav-link nav-dropdown-toggle {{ active_class(Active::checkUriPattern('admin/products*')) }}" href="#">--}}
+                    {{--<i class="icon-bag"></i> Category 3--}}
+                {{--</a>--}}
+
+                {{--<ul class="nav-dropdown-items">--}}
+                    {{--<li class="nav-item">--}}
+                        {{--<a class="nav-link {{ active_class(Active::checkUriPattern('admin/products')) }}" href="{{ route('admin.products.index') }}">--}}
+                            {{--<i class="icon-list"></i> Product List--}}
+                        {{--</a>--}}
+                    {{--</li>--}}
+                    {{--<li class="nav-item">--}}
+                        {{--<a class="nav-link {{ active_class(Active::checkUriPattern('admin/products/create')) }}" href="{{ route('admin.products.create') }}">--}}
+                            {{--<i class="icon-plus"></i> Add Products--}}
+                        {{--</a>--}}
+                    {{--</li>--}}
+                {{--</ul>--}}
+            {{--</li>--}}
 
         </ul>
     </nav>
