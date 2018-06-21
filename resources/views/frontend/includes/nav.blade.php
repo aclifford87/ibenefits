@@ -61,9 +61,12 @@
         <span class="badge badge-primary" style="background-color:#2e3192">{{ Cart::count() }}</span>
         @auth
         <ul class="navbar-nav">
-        <li class="nav-item"><a href="{{ route('frontend.user.account') }}"
-                                class="nav-link {{ active_class(Active::checkRoute('frontend.user.account')) }}">
-                Balance £<b>{{ $logged_in_user->balance - Cart::total() }}</b></a></li>
+        <li class="nav-item">
+            <a href="{{ route('frontend.user.account') }}"
+               class="nav-link {{ active_class(Active::checkRoute('frontend.user.account')) }}">
+                Balance £ {{ $logged_in_user->balance }}
+            </a>
+        </li>
         </ul>
         @endauth
         {{--<p>Balance <span class="badge badge-secondary">{{ $logged_in_user->balance }}</span></p>--}}
