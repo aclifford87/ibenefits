@@ -47,7 +47,7 @@
                 </li>
             @endguest
 
-            <li class="nav-item"><a href="{{route('frontend.contact')}}" class="nav-link {{ active_class(Active::checkRoute('frontend.contact')) }}">{{ __('navs.frontend.contact') }}</a></li>
+            {{--<li class="nav-item"><a href="{{route('frontend.contact')}}" class="nav-link {{ active_class(Active::checkRoute('frontend.contact')) }}">{{ __('navs.frontend.contact') }}</a></li>--}}
         </ul>
         <form class="form-inline mt-2 mt-md-0">
             <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
@@ -58,7 +58,15 @@
         @else
             <a href="{{ route('frontend.cart') }}" style="color:#2e3192"><i class="fas fa-shopping-cart fa-2x ml-2 mr-2"></i></a>
         @endif
-        <span class="badge badge-light">{{ Cart::count() }}</span>
+        <span class="badge badge-primary" style="background-color:#2e3192">{{ Cart::count() }}</span>
+        @auth
+        <ul class="navbar-nav">
+        <li class="nav-item"><a href="{{ route('frontend.user.account') }}"
+                                class="nav-link {{ active_class(Active::checkRoute('frontend.user.account')) }}">
+                Balance £<b>{{ $logged_in_user->balance - Cart::total() }}</b></a></li>
+        </ul>
+        @endauth
+        {{--<p>Balance <span class="badge badge-secondary">{{ $logged_in_user->balance }}</span></p>--}}
     </div>
 </nav>
 </header>
