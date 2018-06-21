@@ -27,7 +27,45 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     Route::get('shop/product/{id}', 'ShopController@product')->name('product');
     Route::get('shop/product/cart/add', 'ShopController@add_cart')->name('add_cart');
 
-    
+    /*
+     * Routes for footer links
+     */
+
+    Route::get('frontend/contact', function () {
+        return view('frontend.contact');
+    });
+
+    Route::get('footer/FAQs', function () {
+        return view('frontend.footer.FAQs');
+    });
+
+    Route::get('footer/headquarters', function () {
+        return view('frontend.footer.headquarters');
+    });
+
+    Route::get('footer/phone-numbers', function () {
+        return view('frontend.footer.phone-numbers');
+    });
+
+    Route::get('footer/Policies&Rules', function () {
+        return view('frontend.footer.Policies&Rules');
+    });
+
+    Route::get('footer/Report-An-Issue', function () {
+        return view('frontend.footer.Report-An-Issue');
+    });
+
+    Route::get('footer/Shipping-Policy', function () {
+        return view('frontend.footer.Shipping-Policy');
+    });
+
+    Route::get('footer/Survey', function () {
+        return view('frontend.footer.Survey');
+    });
+
+    Route::get('footer/sitemap', function () {
+        return view('frontend.footer.sitemap');
+    });
 
 });
 
