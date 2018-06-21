@@ -60,6 +60,19 @@
                     </div><!--form-group-->
 
                     <div class="form-group row">
+                        {{ html()->label(__('Balance'))
+                        ->class('col-md-2 form-control-label')->for('balance') }}
+
+                        <div class="col-md-10">
+                            {{ html()->text('balance')
+                                ->class('form-control')
+                                ->placeholder(__('Balance'))
+                                ->attribute('maxlength', 191)
+                            }}
+                        </div><!--col-->
+                    </div><!--form-group-->
+
+                    <div class="form-group row">
                         {{ html()->label(__('validation.attributes.backend.access.users.timezone'))->class('col-md-2 form-control-label')->for('timezone') }}
 
                         <div class="col-md-10">

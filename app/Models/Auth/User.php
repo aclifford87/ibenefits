@@ -37,6 +37,7 @@ class User extends Authenticatable
         'first_name',
         'last_name',
         'email',
+        'balance',
         'avatar_type',
         'avatar_location',
         'password',

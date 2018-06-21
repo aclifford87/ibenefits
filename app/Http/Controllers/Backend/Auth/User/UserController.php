@@ -125,6 +125,7 @@ class UserController extends Controller
             'first_name',
             'last_name',
             'email',
+            'balance',
             'timezone',
             'roles',
             'permissions'
