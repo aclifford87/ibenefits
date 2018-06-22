@@ -47,9 +47,9 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
         return view('frontend.footer.phone-numbers');
     })->name('phone-numbers');
 
-    Route::get('policies-rules', function () {
-        return view('frontend.footer.policies-rules');
-    })->name('policies-rules');
+    Route::get('rules-policy', function () {
+        return view('frontend.footer.rules-policy');
+    })->name('rules-policy');
 
     Route::get('report-an-issue', function () {
         return view('frontend.footer.Report-An-Issue');
