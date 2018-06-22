@@ -40,7 +40,8 @@
                                             <img class="media-object" src="{{ $row->options->image_url }}" style="width: 100px; height: 100px;"> </a>
                                         <div class="media-body ml-5">
                                             <p class="media-heading"><a href="/shop/product/{{ $row->options->product_id }}">{{ $row->name }}</a></p>
-                                            <p class="media-heading"><a href="/shop/cart/remove/{{ $row->rowId }}"><u>Remove</u></a></p>
+                                            <p class="media-heading"><button onclick="update()" class="btn btn-primary">Update</button>
+                                            <a class="btn btn-danger" href="/shop/cart/remove/{{ $row->rowId }}">Remove</a></p>
                                         </div>
                                 </div>
                             </td>
