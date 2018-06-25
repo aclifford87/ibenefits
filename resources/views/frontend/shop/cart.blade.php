@@ -4,9 +4,8 @@
 
 @section('content')
     <main role="main">
-        <div class="container mt-5 pt-5">
+        <div class="container">
             <!-- START THE FEATURETTES -->
-            <hr class="featurette-divider">
             <h2 class="featurette-heading"><u>iBenefits Cart</u></h2>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb bg-white">
@@ -47,7 +46,11 @@
                             </td>
                             <td></td>
                             <td class="col-sm-1 col-md-1" style="text-align: center">
-                                <input type="email" class="form-control" id="exampleInputEmail1" value="{{ $row->qty }}">
+                                {{ Form::open(['route' => 'frontend.updateCart', 'method' => 'post', 'id' => 'update']) }}
+
+                                    <input type="text" class="form-control" name="qty" value="{{ $row->qty }}">
+                                    <input type="text" name="rowId" value="{{ $row->rowId }}" hidden>
+                                {{ Form::close() }}
                             </td>
                             <td class="col-sm-1 col-md-1 text-center">£{{ $row->price }}</td>
                             <td class="col-sm-1 col-md-1 text-center">£{{ $row->total }}</td>
@@ -76,6 +79,5 @@
                 </div>
             </div>
         </div>
-
     </main>
 @endsection

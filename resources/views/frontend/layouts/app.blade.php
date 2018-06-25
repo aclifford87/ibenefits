@@ -22,14 +22,14 @@
 
         @stack('after-styles')
         <!-- Custom styles for this template -->
-        <link href="css/carousel.css" rel="stylesheet">
+        <link href="/css/carousel.css" rel="stylesheet">
     </head>
     <body>
         <div id="app">
             @include('includes.partials.logged-in-as')
             @include('frontend.includes.nav')
 
-            <div class="">
+            <div class="container" style="padding-top: 10px">
                 @include('includes.partials.messages')
                 @yield('content')
 
@@ -41,7 +41,13 @@
         {!! script(mix('js/frontend.js')) !!}
         @stack('after-scripts')
         <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+        <script>
+            function update() {
+                console.log('help')
+                $("#update").submit()
 
+            }
+        </script>
         @include('includes.partials.ga')
     </body>
 </html>

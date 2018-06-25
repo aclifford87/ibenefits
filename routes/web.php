@@ -22,11 +22,9 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     Route::post('shop/cart', 'ShopController@add_cart')->name('addCart');
     Route::get('shop/cart/remove/{id}', 'ShopController@remove_from_cart')->name('removeFromCart');
 
-
-    //Route::get('shop/product', 'ShopController@product')->name('product');
     Route::get('shop/product/{id}', 'ShopController@product')->name('product');
     Route::get('shop/product/cart/add', 'ShopController@add_cart')->name('add_cart');
-
+    Route::post('shop/cart/update', 'ShopController@update')->name('updateCart');
     /*
      * Routes for footer links
      */

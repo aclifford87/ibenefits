@@ -46,4 +46,11 @@ class ShopController extends Controller
     function cart(){
         return view('frontend.shop.cart');
     }
+
+    function update(Request $request){
+
+        Cart::update($request->input('rowId'), $request->input('qty'));
+        return redirect()->back();
+    }
+
 }
