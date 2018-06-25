@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
-use App\Models\Shop\Products;
+use App\Models\Shop\OccupationalHealth;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Spatie\Html\Elements\Input;
 
@@ -13,17 +13,17 @@ class ShopController extends Controller
 {
     function index(){
         //get all products and services
-        $products = Products::where('visible', 1)->get();
+        $products = OccupationalHealth::where('visible', 1)->get();
         return view('frontend.shop.index', compact('products'));
     }
 
     function product($id){
-        $product = Products::findOrFail($id);
+        $product = OccupationalHealth::findOrFail($id);
         return view('frontend.shop.product', compact('product'));
     }
 
     function add_cart(Request $request){
-        $product = Products::where('name', $request->input('name'))->get();
+        $product = OccupationalHealth::where('name', $request->input('name'))->get();
         $image_url = "";
         $id = "";
         foreach ($product as $prod){

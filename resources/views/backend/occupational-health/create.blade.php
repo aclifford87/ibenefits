@@ -6,7 +6,7 @@
     <h3>Add a Product</h3>
     {{--{{ Form::model($product, ['route' => ['admin.products.create', $product->id], 'class' => '',--}}
          {{--'method' => 'PUT', 'files' => true]) }}--}}
-    {{ Form::open(['route' => 'admin.products.store', 'method' => 'post', 'files' => true]) }}
+    {{ Form::open(['route' => 'admin.occupational-health.store', 'method' => 'post', 'files' => true]) }}
     {{--<form method="PUT" enctype="multipart/form-data" action="{{ route('admin.products.create') }}">--}}
         {{ csrf_field() }}
         <div class="form-group row">

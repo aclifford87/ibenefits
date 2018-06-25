@@ -6,9 +6,9 @@
 Route::redirect('/', '/admin/dashboard', 301);
 Route::get('dashboard', 'DashboardController@index')->name('dashboard');
 // CATEGORIES CONTROLLERS
-Route::resource('products','ProductsController');
+Route::resource('occupational-health','OccupationalHealthController');
 Route::resource('insurance','InsuranceController');
 
 Route::get('all/products', function () {
-    return ['data' => \App\Models\Shop\Products::all()];
+    return ['data' => \App\Models\Shop\OccupationalHealth::all()];
 });

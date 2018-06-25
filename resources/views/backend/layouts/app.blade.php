@@ -66,7 +66,7 @@
                 },
                 "columns": [
                     { "data": function (data) {
-                            return '<a href="products/'+data.id+'/edit">'+data.name+'</a>'
+                            return '<a href="occupational-health/'+data.id+'/edit">'+data.name+'</a>'
                         }, className: "centre"
                     },
                     { "data": function (data) {
@@ -85,7 +85,7 @@
                         }, className: "centre"
                     },
                     { "data": function (data) {
-                            return "<form method='post' action='/admin/products/" + data.id + "'>" +
+                            return "<form method='post' action='/admin/occupational-health/" + data.id + "'>" +
                                     "<input type='hidden' name='_token' value='<?php echo csrf_token(); ?>'>" +
                                     "<input name=\"_method\" type=\"hidden\" value=\"DELETE\">" +
                                     "<button type='submit' class='btn btn-danger'>Delete</button>" +

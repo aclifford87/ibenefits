@@ -62,19 +62,19 @@
             </li>
 
             {{--Products--}}
-            <li class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern('admin/products*'), 'open') }}">
-                <a class="nav-link nav-dropdown-toggle {{ active_class(Active::checkUriPattern('admin/products*')) }}" href="#">
+            <li class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern('admin/occupational-health*'), 'open') }}">
+                <a class="nav-link nav-dropdown-toggle {{ active_class(Active::checkUriPattern('admin/occupational-health*')) }}" href="#">
                     <i class="icon-bag"></i> Category 1
                 </a>
 
                 <ul class="nav-dropdown-items">
                     <li class="nav-item">
-                        <a class="nav-link {{ active_class(Active::checkUriPattern('admin/products')) }}" href="{{ route('admin.products.index') }}">
+                        <a class="nav-link {{ active_class(Active::checkUriPattern('admin/occupational-health')) }}" href="{{ route('admin.occupational-health.index') }}">
                             <i class="icon-list"></i> Product List
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ active_class(Active::checkUriPattern('admin/products/create')) }}" href="{{ route('admin.products.create') }}">
+                        <a class="nav-link {{ active_class(Active::checkUriPattern('admin/occupational-health/create')) }}" href="{{ route('admin.occupational-health.create') }}">
                             <i class="icon-plus"></i> Add Products
                         </a>
                     </li>
