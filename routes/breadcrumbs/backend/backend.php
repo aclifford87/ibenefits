@@ -24,7 +24,7 @@ Breadcrumbs::for('admin.occupational-health.show', function ($trail) {
 });
 // BREADCRUMS FOR INSURANCE
 Breadcrumbs::for('admin.insurance.index', function ($trail) {
-    $trail->push(__('strings.backend.products.title'), route('admin.insurance.index'));
+    $trail->push(__('Insurance'), route('admin.insurance.index'));
 });
 
 Breadcrumbs::for('admin.insurance.edit', function ($trail) {

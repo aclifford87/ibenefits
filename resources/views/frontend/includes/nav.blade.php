@@ -64,7 +64,7 @@
         <li class="nav-item">
             <a href="{{ route('frontend.user.account') }}"
                class="nav-link {{ active_class(Active::checkRoute('frontend.user.account')) }}">
-                Balance £ {{ $logged_in_user->balance }}
+                Balance £{{ $logged_in_user->balance }}
             </a>
         </li>
         </ul>
