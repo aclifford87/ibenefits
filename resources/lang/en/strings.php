@@ -30,7 +30,7 @@ return [
         ],
 
         'products' => [
-            'title'   => 'Products',
+            'title'   => 'Occupational Health',
             'welcome' => 'Welcome',
                 'add_product' => [
                     'title'   => 'Add Product',

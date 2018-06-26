@@ -12,3 +12,6 @@ Route::resource('insurance','InsuranceController');
 Route::get('all/products', function () {
     return ['data' => \App\Models\Shop\OccupationalHealth::all()];
 });
+Route::get('all/insurance', function () {
+    return ['data' => \App\Models\Shop\Insurance::all()];
+});

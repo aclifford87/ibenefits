@@ -18,18 +18,18 @@ class InsuranceController extends Controller
      */
     public function index()
     {
-        return view('backend.products.index');
+        return view('backend.insurance.index');
     }
 
     public function create()
     {
-        return view('backend.products.create');
+        return view('backend.insurance.create');
     }
 
     public function edit($id)
     {
         $product = OccupationalHealth::findOrFail($id);
-        return view('backend.products.edit', compact('product'));
+        return view('backend.insurance.edit', compact('insurance_product'));
     }
 
     public function update(Request $request, $id) {
