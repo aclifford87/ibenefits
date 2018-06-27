@@ -60,7 +60,7 @@
         @endif
         <span class="badge badge-primary" style="background-color:#2e3192">{{ Cart::count() }}</span>
         @auth
-        <ul class="navbar-nav">
+        <ul class="navbar-nav border ml-1 mr-1">
             <li class="nav-item">
                 <a href="{{ route('frontend.user.account') }}"
                    class="nav-link {{ active_class(Active::checkRoute('frontend.user.account')) }}"> Balance
@@ -68,15 +68,15 @@
                         $cart_total = floatval(str_replace(",","",Cart::total()));
                     ?>
                     @if($cart_total > $logged_in_user->balance )
-                        <span class="text-danger"><i style="color:#2e3192" class="fas fa-pound-sign fa-2x" aria-hidden="true"></i>{{ $logged_in_user->balance - $cart_total }}</span>
+                        <span class="text-danger"><i class="fas fa-pound-sign fa-2x" aria-hidden="true"></i>{{ $logged_in_user->balance - $cart_total }}</span>
                         @else
-                        <i class="fas fa-pound-sign fa-2x" aria-hidden="true"></i>{{ $logged_in_user->balance - $cart_total }}
+                        <i style="color:#2e3192" class="fas fa-pound-sign fa-2x" aria-hidden="true"></i>{{ $logged_in_user->balance - $cart_total }}
                     @endif
                 </a>
             </li>
         </ul>
             <form class="form-inline mt-2 mt-md-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="£{{ $logged_in_user->balance }}" aria-label="Search">
+                <input class="form-control mr-sm-2" type="text" placeholder="£{{ $logged_in_user->balance }}" aria-label="Search" required>
                 <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Cash Out</button>
             </form>
             {{--<a href="{{ route('frontend.user.account') }}"--}}

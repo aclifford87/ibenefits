@@ -24,7 +24,7 @@
         <!-- Custom styles for this template -->
         <link href="/css/carousel.css" rel="stylesheet">
     </head>
-    <body>
+    <body class="mb-0 pb-0">
         <div id="app">
             @include('includes.partials.logged-in-as')
             @include('frontend.includes.nav')
@@ -32,10 +32,9 @@
             <div class="container" style="padding-top: 10px">
                 @include('includes.partials.messages')
                 @yield('content')
-
             </div><!-- container -->
         </div><!-- #app -->
-        @include('frontend.includes.footer')
+
         <!-- Scripts -->
         @stack('before-scripts')
         {!! script(mix('js/frontend.js')) !!}
@@ -49,5 +48,6 @@
             }
         </script>
         @include('includes.partials.ga')
+        @include('frontend.includes.footer')
     </body>
 </html>
