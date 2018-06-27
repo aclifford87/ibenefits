@@ -61,23 +61,29 @@
         <span class="badge badge-primary" style="background-color:#2e3192">{{ Cart::count() }}</span>
         @auth
         <ul class="navbar-nav">
-        <li class="nav-item">
-            <a href="{{ route('frontend.user.account') }}"
-               class="nav-link {{ active_class(Active::checkRoute('frontend.user.account')) }}">
-                Balance
-                <?php
-                    $cart_total = floatval(str_replace(",","",Cart::total()));
-                ?>
-                @if($cart_total > $logged_in_user->balance )
-                    <span class="text-danger"><i class="fas fa-pound-sign fa-2x" aria-hidden="true"></i>{{ $logged_in_user->balance - $cart_total }}</span>
-                    @else
-                    <i class="fas fa-pound-sign fa-2x" aria-hidden="true"></i>{{ $logged_in_user->balance - $cart_total }}
-                @endif
-            </a>
-        </li>
+            <li class="nav-item">
+                <a href="{{ route('frontend.user.account') }}"
+                   class="nav-link {{ active_class(Active::checkRoute('frontend.user.account')) }}"> Balance
+                    <?php
+                        $cart_total = floatval(str_replace(",","",Cart::total()));
+                    ?>
+                    @if($cart_total > $logged_in_user->balance )
+                        <span class="text-danger"><i style="color:#2e3192" class="fas fa-pound-sign fa-2x" aria-hidden="true"></i>{{ $logged_in_user->balance - $cart_total }}</span>
+                        @else
+                        <i class="fas fa-pound-sign fa-2x" aria-hidden="true"></i>{{ $logged_in_user->balance - $cart_total }}
+                    @endif
+                </a>
+            </li>
         </ul>
+            <form class="form-inline mt-2 mt-md-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="£{{ $logged_in_user->balance }}" aria-label="Search">
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Cash Out</button>
+            </form>
+            {{--<a href="{{ route('frontend.user.account') }}"--}}
+                   {{--class="btn btn-outline-primary {{ active_class(Active::checkRoute('frontend.user.account')) }}">--}}
+                    {{--Cash Out--}}
+            {{--</a>--}}
         @endauth
-        {{--<p>Balance <span class="badge badge-secondary">{{ $logged_in_user->balance }}</span></p>--}}
     </div>
 </nav>
 </header>

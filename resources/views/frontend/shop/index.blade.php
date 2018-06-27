@@ -6,14 +6,14 @@
     <main role="main">
         <div class="container">
             <!-- START THE FEATURETTES -->
-            <h2 class="featurette-heading pt-3"><u>iBenefits Products</u></h2>
+            <h2 class="featurette-heading"><u>iBenefits Products</u></h2>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb bg-white">
                     <li class="breadcrumb-item"><a href="/">Home</a></li>
                     <li class="breadcrumb-item active" aria-current="page">shop</li>
                 </ol>
             </nav>
-            <div class="row mb-2 pt-3">
+            <div class="row mb-2 pt-2">
 
             @foreach($products as $value=>$product)
                 <?php

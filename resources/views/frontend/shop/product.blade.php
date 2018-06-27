@@ -4,8 +4,8 @@
 
 @section('content')
     <main role="main">
-        <div class="container pt-5 mt-lg-5">
-            <hr class="featurette-divider">
+        <div class="container">
+            {{--<hr class="featurette-divider">--}}
             <h2 class="featurette-heading"><u>iBenefits Product</u></h2>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb bg-white">
