@@ -64,7 +64,15 @@
         <li class="nav-item">
             <a href="{{ route('frontend.user.account') }}"
                class="nav-link {{ active_class(Active::checkRoute('frontend.user.account')) }}">
-                Balance £{{ $logged_in_user->balance }}
+                Balance
+                <?php
+                    $cart_total = floatval(str_replace(",","",Cart::total()));
+                ?>
+                @if($cart_total > $logged_in_user->balance )
+                    <span class="text-danger"><i class="fas fa-pound-sign fa-2x" aria-hidden="true"></i>{{ $logged_in_user->balance - $cart_total }}</span>
+                    @else
+                    <i class="fas fa-pound-sign fa-2x" aria-hidden="true"></i>{{ $logged_in_user->balance - $cart_total }}
+                @endif
             </a>
         </li>
         </ul>
