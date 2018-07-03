@@ -44,10 +44,43 @@
             function update() {
                 console.log('help')
                 $("#update").submit()
-
+            }
+            function cashout() {
+                console.log('cashout')
+                $("#cashout_form").submit()
             }
         </script>
         @include('includes.partials.ga')
         @include('frontend.includes.footer')
+
+        <!-- Modal -->
+        <div class="modal fade" id="cashOut" tabindex="-1" role="dialog" aria-labelledby="cashOutTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="cashOutTitle">Cash Out</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        {{ Form::open(['route' => 'frontend.cashOut', 'method' => 'post', 'id' => 'cashout_form']) }}
+                            <div class="form-group">
+                                <label for="amount" class="col-form-label">Amount to Cash Out:</label>
+                                <input max="{{ $logged_in_user->balance }}" type="number" class="form-control" name="cashout">
+                            </div>
+                            {{--<div class="form-group">--}}
+                                {{--<label for="message-text" class="col-form-label">Message:</label>--}}
+                                {{--<textarea class="form-control" id="message-text"></textarea>--}}
+                            {{--</div>--}}
+                        {{ Form::close() }}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button onclick="cashout()" type="button" class="btn btn-primary">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

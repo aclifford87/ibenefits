@@ -25,6 +25,16 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     Route::get('shop/product/{id}', 'ShopController@product')->name('product');
     Route::get('shop/product/cart/add', 'ShopController@add_cart')->name('add_cart');
     Route::post('shop/cart/update', 'ShopController@update')->name('updateCart');
+
+    //CASH OUT
+    Route::post('shop/cash/out', 'ShopController@cashout')->name('cashOut');
+
+    Route::get('send_test_email', function(){
+        Mail::raw('Sending emails with Mailgun and Laravel is easy!', function($message)
+        {
+            $message->to('nick.ashford@growthpartnersplc.co.uk');
+        });
+    });
     /*
      * Routes for footer links
      */

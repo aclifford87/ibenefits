@@ -79,14 +79,9 @@
                 </a>
             </li>
         </ul>
-            <form class="form-inline mt-2 mt-md-0 ml-2">
-                <input class="form-control mr-sm-2" type="text" placeholder="£{{ $logged_in_user->balance }}" aria-label="Search" required>
-                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Cash Out</button>
-            </form>
-            {{--<a href="{{ route('frontend.user.account') }}"--}}
-                   {{--class="btn btn-outline-primary {{ active_class(Active::checkRoute('frontend.user.account')) }}">--}}
-                    {{--Cash Out--}}
-            {{--</a>--}}
+            <div class="form-inline mt-2 mt-md-0 ml-2">
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="button" data-toggle="modal" data-target="#cashOut">Cash Out</button>
+            </div>
         @endauth
     </div>
 </nav>

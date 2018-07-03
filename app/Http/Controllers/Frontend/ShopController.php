@@ -7,7 +7,8 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use App\Models\Shop\OccupationalHealth;
 use Gloudemans\Shoppingcart\Facades\Cart;
-use Spatie\Html\Elements\Input;
+use Illuminate\Support\Facades\Mail;
+
 
 class ShopController extends Controller
 {
@@ -51,6 +52,27 @@ class ShopController extends Controller
 
         Cart::update($request->input('rowId'), $request->input('qty'));
         return redirect()->back();
+    }
+
+    function cashout(Request $request){
+        $cashout = $request->input('cashout');
+        $user = Auth::user();
+        $user_array = Auth::user()->toArray();
+        $balance = Auth::user()->balance;
+        if($cashout > $balance){
+            return redirect()->back()->withFlashDanger('You only have £'. $balance . ' in your account.');
+        }
+        $new_balance = $balance - $cashout;
+        $user->update(['balance' => $new_balance]);
+        // SEND EMAIL
+        Mail::raw($user->first_name . ' ' . $user->last_name .
+             ' has requested £' . $cashout . ' cash out.', function($message) use ($user)
+        {
+            $message->subject('Cash Back!');
+            $message->from($user->email, 'iBenefits Shop');
+            $message->to('nick.ashford@growthpartnersplc.co.uk');
+        });
+        return redirect()->back()->withFlashSuccess('Your request has been emailed.');
     }
 
 }
