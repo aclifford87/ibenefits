@@ -53,16 +53,10 @@
             <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
-        @if(Cart::count() == 0)
-            <div class="border-left ml-2">
-                <a href="{{ route('frontend.cart') }}" style="color:#2e3192"><i class="fas fa-shopping-cart fa-2x ml-2 mr-2"></i></a>
-            </div>
-        @else
-            <div class="border-left ml-2">
-                <a href="{{ route('frontend.cart') }}" style="color:#2e3192"><i class="fas fa-shopping-cart fa-2x ml-2 mr-2"></i></a>
-            </div>
-        @endif
-        <span class="badge badge-primary mr-2" style="background-color:#2e3192">{{ Cart::count() }}</span>
+        <div class="border-left ml-2">
+            <a href="{{ route('frontend.cart') }}" style="color:#2e3192"><i class="fas fa-shopping-cart fa-2x ml-2 mr-2"></i><span class="badge badge-primary mr-2" style="background-color:#2e3192">{{ Cart::count() }}</span></a>
+        </div>
+
         @auth
         <ul class="navbar-nav border-left border-right ml-1 mr-1">
             <li class="nav-item">
@@ -72,9 +66,9 @@
                         $cart_total = floatval(str_replace(",","",Cart::total()));
                     ?>
                     @if($cart_total > $logged_in_user->balance )
-                        <span class="text-danger"><i class="fas fa-pound-sign fa-2x" aria-hidden="true"></i>{{ $logged_in_user->balance - $cart_total }}</span>
+                        <span class="text-danger"><i class="fas fa-pound-sign fa-2x pr-1" aria-hidden="true"></i>{{ $logged_in_user->balance - $cart_total }}</span>
                         @else
-                        <i style="color:#2e3192" class="fas fa-pound-sign fa-2x" aria-hidden="true"></i>{{ $logged_in_user->balance - $cart_total }}
+                        <i style="color:#2e3192" class="fas fa-pound-sign fa-2x pr-1" aria-hidden="true"></i>{{ $logged_in_user->balance - $cart_total }}
                     @endif
                 </a>
             </li>

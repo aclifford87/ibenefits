@@ -29,12 +29,6 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     //CASH OUT
     Route::post('shop/cash/out', 'ShopController@cashout')->name('cashOut');
 
-    Route::get('send_test_email', function(){
-        Mail::raw('Sending emails with Mailgun and Laravel is easy!', function($message)
-        {
-            $message->to('nick.ashford@growthpartnersplc.co.uk');
-        });
-    });
     /*
      * Routes for footer links
      */
