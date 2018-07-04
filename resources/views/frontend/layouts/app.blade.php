@@ -64,6 +64,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
+                        @auth
                         {{ Form::open(['route' => 'frontend.cashOut', 'method' => 'post', 'id' => 'cashout_form']) }}
                             <div class="form-group">
                                 <label for="amount" class="col-form-label">Amount to Cash Out:</label>
@@ -74,10 +75,11 @@
                                 {{--<textarea class="form-control" id="message-text"></textarea>--}}
                             {{--</div>--}}
                         {{ Form::close() }}
+                        @endauth
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button onclick="cashout()" type="button" class="btn btn-primary">Send</button>
+                        <button onclick="cashout()" type="button" class="btn btn-primary">Cash Out</button>
                     </div>
                 </div>
             </div>

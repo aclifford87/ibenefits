@@ -53,9 +53,17 @@
             <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
-        <div class="border-left ml-2">
-            <a href="{{ route('frontend.cart') }}" style="color:#2e3192"><i class="fas fa-shopping-cart fa-2x ml-2 mr-2"></i><span class="badge badge-primary mr-2" style="background-color:#2e3192">{{ Cart::count() }}</span></a>
-        </div>
+        @if(Cart::count() == 0)
+            <div class="border-left ml-2">
+                <a href="{{ route('frontend.cart') }}" style="color:#2e3192"><i class="fas fa-shopping-cart fa-2x ml-2 mr-2"></i>
+                <span class="badge badge-primary mr-2" style="background-color:#2e3192">{{ Cart::count() }}</span></a>
+            </div>
+        @else
+            <div class="border-left ml-2">
+                <a href="{{ route('frontend.cart') }}" style="color:#2e3192"><i class="fas fa-shopping-cart fa-2x ml-2 mr-2"></i>
+                <span class="badge badge-primary mr-2" style="background-color:#2e3192">{{ Cart::count() }}</span></a>
+            </div>
+        @endif
 
         @auth
         <ul class="navbar-nav border-left border-right ml-1 mr-1">
