@@ -5,8 +5,8 @@
 
             <div class="col-md-2">
                 <h6><u>Contact us</u></h6></br>
-                <a href="{{ route('frontend.contact') }}">Contact Form</a>
-                <a href="{{ route('frontend.headquarters') }}">headquarters</a></br>
+                <a href="{{ route('frontend.contact') }}">Contact Form</a></br>
+                <a href="{{ route('frontend.headquarters') }}">Headquarters</a></br>
                 <a href="{{ route('frontend.phone-numbers') }}">Available phone numbers</a>
             </div>
 
@@ -17,8 +17,8 @@
 
             <div class="col-md-2">
                 <h6><u>Policies & Rules</u></h6></br>
-                <a href="{{ route('frontend.rules-policy') }}">Policies & Rules Article</a>
-                <a href="{{ route('frontend.shipping-policy') }}">Shipping Policy Article</a>
+                <a href="{{ route('frontend.rules-policy') }}">Policies & Rules Article</a></br>
+                <a href="{{ route('frontend.shipping-policy') }}">Shipping Policy Article</a></br>
                 <a href="{{ route('frontend.sitemap') }}">Sitemap</a>
             </div>
 
