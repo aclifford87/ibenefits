@@ -12,23 +12,23 @@
         <div class="form-group row">
             <label for="name" class="col-sm-2 col-form-label">Product Name</label>
             <div class="col-sm-10">
-                {{ Form::text('name', null, ['class' => 'form-control']) }}
+                {{ Form::text('name', null, ['class' => 'form-control', 'required']) }}
             </div>
         </div>
         <div class="form-group row">
             <label for="price" class="col-sm-2 col-form-label">Product Price</label>
             <div class="col-sm-10">
-                {{ Form::text('price', null, ['class' => 'form-control']) }}
+                {{ Form::text('price', null, ['class' => 'form-control', 'required']) }}
             </div>
         </div>
         <div class="form-group row">
             <div class="col-md-2">Description</div>
             <div class="col-md-4">
-                {{ Form::textarea('description', null, ['class' => 'form-control']) }}
+                {{ Form::textarea('description', null, ['class' => 'form-control', 'required']) }}
             </div>
             <div class="col-md-1">Product Information</div>
             <div class="col-md-5">
-                {{ Form::textarea('product_info', null, ['class' => 'form-control']) }}
+                {{ Form::textarea('product_info', null, ['class' => 'form-control', 'required']) }}
             </div>
         </div>
         <div class="form-group row">

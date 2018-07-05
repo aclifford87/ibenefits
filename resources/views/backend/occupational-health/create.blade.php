@@ -4,10 +4,7 @@
 
 @section('content')
     <h3>Add a Product</h3>
-    {{--{{ Form::model($product, ['route' => ['admin.products.create', $product->id], 'class' => '',--}}
-         {{--'method' => 'PUT', 'files' => true]) }}--}}
     {{ Form::open(['route' => 'admin.occupational-health.store', 'method' => 'post', 'files' => true]) }}
-    {{--<form method="PUT" enctype="multipart/form-data" action="{{ route('admin.products.create') }}">--}}
         {{ csrf_field() }}
         <div class="form-group row">
             <label for="name" class="col-sm-2 col-form-label">Product Name</label>
@@ -18,7 +15,7 @@
         <div class="form-group row">
             <label for="price" class="col-sm-2 col-form-label">Product Price</label>
             <div class="col-sm-10">
-                <input name="price" type="text" class="form-control" id="price" placeholder="Product Price">
+                <input name="price" type="text" class="form-control" id="price" placeholder="Product Price" required>
             </div>
         </div>
         <div class="form-group row">
