@@ -2,19 +2,23 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\Models\Shop\Insurance;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use App\Models\Shop\OccupationalHealth;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Support\Facades\Mail;
+use PhpParser\Node\Expr\Cast\Object_;
 
 
 class ShopController extends Controller
 {
     function index(){
         //get all products and services
-        $products = OccupationalHealth::where('visible', 1)->get();
+        $oc_health = OccupationalHealth::where('visible', 1)->get();
+        $insurance = Insurance::where('visible', 1)->get();
+        $products = $oc_health->toBase()->merge($insurance);
         return view('frontend.shop.index', compact('products'));
     }
 
