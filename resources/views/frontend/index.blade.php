@@ -70,15 +70,15 @@
                 <div class="col-lg-4 col-md-4 col-sm-4 col-4">
                     <a href="/shop">
                     <img class="rounded-circle float-left img-fluid"
-                         src="/img/frontend/productshop.png"
+                         src="/img/frontend/all.svg"
                          alt="Generic placeholder image" width="180" height="180">
                     </a>
                 </div><!-- /.col-lg-4 -->
                 <div class="col-lg-4 col-md-4 col-sm-4 col-4">
-                    <img class="rounded-circle img-fluid" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="180" height="180">
+                    <img class="rounded-circle img-fluid" src="/img/frontend/training.svg" alt="Generic placeholder image" width="180" height="180">
                 </div><!-- /.col-lg-4 -->
                 <div class="col-lg-4 col-md-4 col-sm-4 col-4">
-                    <img class="rounded-circle float-right img-fluid" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="180" height="180">
+                    <img class="rounded-circle float-right img-fluid" src="/img/frontend/concierge.svg" alt="Generic placeholder image" width="180" height="180">
                 </div><!-- /.col-lg-4 -->
             </div><!-- /.row -->
 

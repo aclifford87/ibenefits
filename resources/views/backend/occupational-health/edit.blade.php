@@ -46,6 +46,20 @@
             </div>
         </div>
         <div class="form-group row">
+            <div class="col-sm-2">New In</div>
+            <div class="col-sm-10">
+                <div class="form-check">
+                    {{ Form::radio('new_in', 1) }}
+                </div>
+            </div>
+            <div class="col-sm-2">Remove New In</div>
+            <div class="col-sm-10">
+                <div class="form-check">
+                    {{ Form::radio('new_in', 0) }}
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
             <div class="col-sm-2">Uploaded Image</div>
             <img src="{{ $product->image_url }}" height="40">
             <div class="col-sm-10">

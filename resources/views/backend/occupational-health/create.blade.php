@@ -30,14 +30,22 @@
             <textarea class="form-control" rows="10" cols="100" name="product_info" required></textarea>
         </div>
     </div>
-        <div class="form-group row">
-            <div class="col-sm-2">Visible on Page?</div>
-            <div class="col-sm-10">
-                <div class="form-check">
-                    <input name="visible" class="form-check-input" type="checkbox" id="visible" value="1">
-                </div>
+    <div class="form-group row">
+        <div class="col-sm-2">Visible on Page?</div>
+        <div class="col-sm-10">
+            <div class="form-check">
+                <input name="visible" class="form-check-input" type="checkbox" id="visible" value="1">
             </div>
         </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-2">New In?</div>
+        <div class="col-sm-10">
+            <div class="form-check">
+                <input name="new_id" class="form-check-input" type="checkbox" id="new_id" value="1">
+            </div>
+        </div>
+    </div>
         <div class="form-group row">
             <div class="col-sm-2">Upload Image</div>
             <div class="col-sm-10">

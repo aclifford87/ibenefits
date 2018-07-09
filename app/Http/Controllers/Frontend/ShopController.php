@@ -19,6 +19,7 @@ class ShopController extends Controller
         $oc_health = OccupationalHealth::where('visible', 1)->get();
         $insurance = Insurance::where('visible', 1)->get();
         $products = $oc_health->toBase()->merge($insurance);
+        //return $products;
         return view('frontend.shop.index', compact('products'));
     }
 

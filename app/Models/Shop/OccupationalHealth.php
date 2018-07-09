@@ -14,6 +14,7 @@ class OccupationalHealth extends Model
         'image_url',
         'price',
         'visible',
+        'new_in',
         'link_1',
         'link_2',
         'link_3',

@@ -21,7 +21,7 @@
                     if ($value % 2 == 0){ ?>
 
                         <div class="col-md-6">
-                            <a href="shop/product/{{ $product->id }}" style="text-decoration: none">
+                            <a href="{{ $product->url }}{{ $product->id }}" style="text-decoration: none">
                             <div class="card flex-md-row mb-4 box-shadow h-md-250">
                                 <div class="card-body d-flex flex-column align-items-start">
                                     <h3 class="mb-0">
@@ -40,7 +40,7 @@
                     <?php } else { ?>
 
                     <div class="col-md-6">
-                        <a href="shop/product/{{ $product->id }}" style="text-decoration: none">
+                        <a href="{{ $product->url }}{{ $product->id }}" style="text-decoration: none">
                             <div class="card flex-md-row mb-4 box-shadow h-md-250">
                                 <div class="card-body d-flex flex-column align-items-start">
                                     <h3 class="mb-0">

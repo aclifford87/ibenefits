@@ -42,6 +42,14 @@
             </div>
         </div>
         <div class="form-group row">
+            <div class="col-sm-2">New In?</div>
+            <div class="col-sm-10">
+                <div class="form-check">
+                    <input name="new_in" class="form-check-input" type="checkbox" id="new_in" value="1">
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
             <div class="col-sm-2">Upload Image</div>
             <div class="col-sm-10">
                 <input name="image" type="file" class="form-control-file" id="image">
