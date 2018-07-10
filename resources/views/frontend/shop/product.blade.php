@@ -4,9 +4,8 @@
 
 @section('content')
     <main role="main">
-        <div class="container">
+        <div class="container pt-5">
             {{--<hr class="featurette-divider">--}}
-            <h2 class="featurette-heading"><u>iBenefits Product</u></h2>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb bg-white">
                     <li class="breadcrumb-item"><a href="/">Home</a></li>
@@ -20,15 +19,13 @@
                 </div>
                 <div class="col-sm-6 col-md-6">
                     {{ Form::open(['route' => 'frontend.addCart', 'method' => 'post']) }}
-                    <h3 class="product title mb-1">
-                        <a class="text-dark" >{{ $product->name }}</a>
-                        <input name="name" value="{{ $product->name }}" hidden>
-                        <input name="price" value="{{ $product->price }}" hidden>
-                    </h3>
+                    <input name="name" value="{{ $product->name }}" hidden>
+                    <input name="price" value="{{ $product->price }}" hidden>
+                    <h1 style="color: #2e3192" class="product title mb-1">{{ $product->name }}</h1>
 
-                    <div class="product-price mt-3 mb-2">£{{ $product->price }}</div>
+                    <div class="product-price mt-3 mb-2"><b>£{{ $product->price }}</b></div>
 
-                    <div class="mt-3 mb-3 text-muted pr-2">Quantity
+                    <div class="mt-3 mb-3 pr-2"><b>Quantity</b>
                         <input class="input-group-field" type="number" name="quantity" value="1">
                     </div>
 
@@ -36,23 +33,21 @@
                     {{ Form::close() }}
                     <div class="card flex-md-row mt-3">
                         <div class="card-body d-flex flex-column">
-                            <h3 class="mb-2">
-                                <a class="text-dark">Product Description</a>
-                            </h3>
+                            <h3 style="color: #2e3192" class="mb-2">Product Description</h3>
                             <p class="card-text mb-auto">{{ $product->description }}</p>
                         </div>
                     </div>
 
                     <div class="pt-3">
                         @if(!empty($product->link_1) || !empty($product->link_2) || !empty($product->link_3))
-                            <h3>PDF Links</h3>
+                            {{--<h3>PDF Links</h3>--}}
                         @endif
                         @if(!empty($product->link_1))
                                 @if(empty($product->link_1_display))
-                                <a href="{{ $product->link_1 }}" target="_blank">{{ $product->link_1 }}</a>
+                                <a class="btn btn-dark" href="{{ $product->link_1 }}" target="_blank">{{ $product->link_1 }}</a>
                                 <br>
                                 @else
-                                    <a href="{{ $product->link_1 }}">{{ $product->link_1_display }}</a>
+                                    <a class="btn btn-dark" style="background-color: #2e3192" href="{{ $product->link_1 }}">{{ $product->link_1_display }}</a>
                                     <br>
                                 @endif
                         @endif

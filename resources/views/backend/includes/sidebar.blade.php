@@ -64,7 +64,7 @@
             {{--Products--}}
             <li class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern('admin/occupational-health*'), 'open') }}">
                 <a class="nav-link nav-dropdown-toggle {{ active_class(Active::checkUriPattern('admin/occupational-health*')) }}" href="#">
-                    <i class="icon-bag"></i> Occupational Health
+                    <i class="icon-heart"></i> Occupational Health
                 </a>
 
                 <ul class="nav-dropdown-items">
@@ -84,7 +84,7 @@
             {{--Products2--}}
             <li class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern('admin/insurance*'), 'open') }}">
                 <a class="nav-link nav-dropdown-toggle {{ active_class(Active::checkUriPattern('admin/insurance*')) }}" href="#">
-                    <i class="icon-bag"></i> Insurance
+                    <i class="icon-umbrella"></i> Insurance
                 </a>
 
                 <ul class="nav-dropdown-items">
