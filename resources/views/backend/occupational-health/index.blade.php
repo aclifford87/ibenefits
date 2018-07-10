@@ -11,6 +11,7 @@
             <th>Image</th>
             <th>Price</th>
             <th>Visible</th>
+            <th>New In</th>
             <th></th>
         </tr>
         </thead>

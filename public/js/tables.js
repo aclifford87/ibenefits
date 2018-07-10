@@ -25,6 +25,16 @@ $(document).ready( function () {
                 }, className: "centre"
             },
             { "data": function (data) {
+                    var new_in = data.new_in
+                    if (new_in == "1"){
+                        return "Yes"
+                    } else {
+                        return "No"
+                    }
+                }, className: "centre"
+            },
+
+            { "data": function (data) {
                     return "<form method='post' action='/admin/occupational-health/" + data.id + "'>" +
                         "<input type='hidden' name='_token' value='<?php echo csrf_token(); ?>'>" +
                         "<input name=\"_method\" type=\"hidden\" value=\"DELETE\">" +
@@ -55,6 +65,15 @@ $(document).ready( function () {
             { "data": function (data) {
                     var visible = data.visible
                     if (visible == "1"){
+                        return "Yes"
+                    } else {
+                        return "No"
+                    }
+                }, className: "centre"
+            },
+            { "data": function (data) {
+                    var new_in = data.new_in
+                    if (new_in == "1"){
                         return "Yes"
                     } else {
                         return "No"
