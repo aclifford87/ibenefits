@@ -3,7 +3,7 @@
 @section('title', app_name() . ' | ' . __('strings.backend.dashboard.title'))
 
 @section('content')
-    <h3>Edit Product</h3>
+    <h3>Edit {{ $product->name }}</h3>
     {{--<form method="patch" enctype="multipart/form-data" action="{{ route('admin.products.update', $product->id) }}">--}}
         {{ Form::model($product, ['route' => ['admin.occupational-health.update', $product->id], 'class' => '',
          'method' => 'PATCH', 'files' => true]) }}

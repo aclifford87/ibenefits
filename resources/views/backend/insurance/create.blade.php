@@ -3,7 +3,7 @@
 @section('title', app_name() . ' | ' . __('strings.backend.dashboard.title'))
 
 @section('content')
-    <h3>Add a Product</h3>
+    <h3>Add a Insurance Product</h3>
     {{--{{ Form::model($product, ['route' => ['admin.products.create', $product->id], 'class' => '',--}}
          {{--'method' => 'PUT', 'files' => true]) }}--}}
     {{ Form::open(['route' => 'admin.insurance.store', 'method' => 'post', 'files' => true]) }}

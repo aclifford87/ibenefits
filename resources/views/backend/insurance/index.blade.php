@@ -3,7 +3,7 @@
 @section('title', app_name() . ' | ' . __('strings.backend.dashboard.title'))
 
 @section('content')
-    <h3>Products</h3>
+    <h3>Insurance</h3>
     <table id="insurance" class="table table-hover">
         <thead>
         <tr>

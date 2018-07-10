@@ -3,7 +3,7 @@
 @section('title', app_name() . ' | ' . __('strings.backend.dashboard.title'))
 
 @section('content')
-    <h3>Add a Product</h3>
+    <h3>Add Occupational Health Product</h3>
     {{ Form::open(['route' => 'admin.occupational-health.store', 'method' => 'post', 'files' => true]) }}
         {{ csrf_field() }}
         <div class="form-group row">
