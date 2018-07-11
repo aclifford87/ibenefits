@@ -8,6 +8,7 @@ Route::get('dashboard', 'DashboardController@index')->name('dashboard');
 // CATEGORIES CONTROLLERS
 Route::resource('occupational-health','OccupationalHealthController');
 Route::resource('insurance','InsuranceController');
+Route::resource('music-app','MusicAppController');
 
 Route::get('all/products', function () {
     return ['data' => \App\Models\Shop\OccupationalHealth::all()];

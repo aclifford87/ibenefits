@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
-use App\Models\Shop\Insurance;
+use App\Models\Shop\MusicApp;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 
@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Input;
 /**
  * Class DashboardController.
  */
-class InsuranceController extends Controller
+class MusicAppController extends Controller
 {
     /**
      * @return \Illuminate\View\View
@@ -28,12 +28,12 @@ class InsuranceController extends Controller
 
     public function edit($id)
     {
-        $product = Insurance::findOrFail($id);
+        $product = MusicApp::findOrFail($id);
         return view('backend.insurance.edit', compact('product'));
     }
 
     public function update(Request $request, $id) {
-        $product = Insurance::find($id);
+        $product = MusicApp::find($id);
         If(Input::hasFile('image_url')) {
             $file = Input::file('image_url');
             $destinationPath = 'product_images';
@@ -63,7 +63,7 @@ class InsuranceController extends Controller
             $filename = $file->getClientOriginalName();
             $file->move($destinationPath, $filename);
 
-            $product = Insurance::create([
+            $product = MusicApp::create([
                 'image_url' => $destinationPath . $filename,
                 'name' => $request->input('name'),
                 'description' => $request->input('description'),
@@ -71,13 +71,13 @@ class InsuranceController extends Controller
                 'visible' => $request->input('visible'),
             ]);
         } else{
-            Insurance::create($request->all());
+            MusicApp::create($request->all());
         }
         return redirect(route('admin.insurance.index'))->withFlashSuccess('The product was successfully added.');
     }
 
     function destroy($id){
-        $product = Insurance::findOrFail($id);
+        $product = MusicApp::findOrFail($id);
         $product->delete();
         return redirect(route('admin.insurance.index'))->withFlashSuccess('The product was successfully deleted.');
     }
