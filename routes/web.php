@@ -17,12 +17,13 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
 
     Route::get('shop', 'ShopController@index')->name('shopIndex');
 
-    Route::get('shop/product', 'ShopController@product')->name('product');
+//    Route::get('shop/product', 'ShopController@product')->name('product');
     Route::get('shop/cart', 'ShopController@cart')->name('cart');
     Route::post('shop/cart', 'ShopController@add_cart')->name('addCart');
     Route::get('shop/cart/remove/{id}', 'ShopController@remove_from_cart')->name('removeFromCart');
 
     Route::get('shop/product/{id}', 'ShopController@product')->name('product');
+    Route::get('shop/insurance/{id}', 'ShopController@insurance')->name('insurance');
     Route::get('shop/product/cart/add', 'ShopController@add_cart')->name('add_cart');
     Route::post('shop/cart/update', 'ShopController@update')->name('updateCart');
 

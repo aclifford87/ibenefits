@@ -28,6 +28,11 @@ class ShopController extends Controller
         return view('frontend.shop.product', compact('product'));
     }
 
+    function insurance($id){
+        $product = Insurance::findOrFail($id);
+        return view('frontend.shop.product', compact('product'));
+    }
+
     function add_cart(Request $request){
         $product = OccupationalHealth::where('name', $request->input('name'))->get();
         $image_url = "";
