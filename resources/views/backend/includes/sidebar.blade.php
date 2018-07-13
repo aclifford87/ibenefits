@@ -124,7 +124,7 @@
             {{--online-training--}}
             <li class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern('admin/online-training*'), 'open') }}">
                 <a class="nav-link nav-dropdown-toggle {{ active_class(Active::checkUriPattern('admin/online-training*')) }}" href="#">
-                    <i class="icon-music-tone-alt"></i> Online Training
+                    <i class="icon-screen-desktop"></i> Online Training
                 </a>
 
                 <ul class="nav-dropdown-items">
