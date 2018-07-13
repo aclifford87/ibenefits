@@ -231,7 +231,7 @@ function delete_online_training_form(id) {
 }
 
 function delete_reward_form(id) {
-    $("#rewards-form").attr("action", '/admin/online-training/'+id+'').submit()
+    $("#rewards-form").attr("action", '/admin/reward/'+id+'').submit()
     console.log("deleted online-training id "+id)
 }
 
