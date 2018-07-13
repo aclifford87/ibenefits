@@ -10,6 +10,7 @@ Route::resource('occupational-health','OccupationalHealthController');
 Route::resource('insurance','InsuranceController');
 Route::resource('music-app','MusicAppController');
 Route::resource('online-training','OnlineTrainingController');
+Route::resource('reward','RewardController');
 
 Route::get('all/products', function () {
     return ['data' => \App\Models\Shop\OccupationalHealth::all()];
@@ -22,4 +23,7 @@ Route::get('all/music-app', function () {
 });
 Route::get('all/online-training', function () {
     return ['data' => \App\Models\Shop\OnlineTraining::all()];
+});
+Route::get('all/rewards', function () {
+    return ['data' => \App\Models\Shop\Reward::all()];
 });

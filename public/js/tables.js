@@ -170,6 +170,49 @@ $(document).ready( function () {
         ],
         //select: true
     });
+
+    var table = $('#rewards').DataTable( {
+        ajax: {
+            url: 'all/rewards'
+            //dataSrc: 'data'
+        },
+        "columns": [
+            { "data": function (data) {
+                    return '<a href="reward/'+data.id+'/edit">'+data.name+'</a>'
+                }, className: "centre"
+            },
+            { "data": function (data) {
+                    var url = data.image_url
+                    return "<img src='" +url+ "' height='30' alt='" +data.name+ "'>"
+                }, className: "centre"
+            },
+            { "data": "price" , className: "centre" },
+            { "data": function (data) {
+                    var visible = data.visible
+                    if (visible == "1"){
+                        return "Yes"
+                    } else {
+                        return "No"
+                    }
+                }, className: "centre"
+            },
+            { "data": function (data) {
+                    var new_in = data.new_in
+                    if (new_in == "1"){
+                        return "Yes"
+                    } else {
+                        return "No"
+                    }
+                }, className: "centre"
+            },
+            { "data": function (data) {
+                    var id = data.id
+                    return "<button onclick='delete_reward_form("+id+")' type='submit' class='btn btn-danger'>Delete</button>"
+                }, className: "centre"
+            },
+        ],
+        //select: true
+    });
 });
 
 function delete_music_app_form(id) {
@@ -184,6 +227,11 @@ function delete_insurance_form(id) {
 
 function delete_online_training_form(id) {
     $("#online-training-form").attr("action", '/admin/online-training/'+id+'').submit()
+    console.log("deleted online-training id "+id)
+}
+
+function delete_reward_form(id) {
+    $("#rewards-form").attr("action", '/admin/online-training/'+id+'').submit()
     console.log("deleted online-training id "+id)
 }
 

@@ -141,6 +141,26 @@
                 </ul>
             </li>
 
+            {{--rewards--}}
+            <li class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern('admin/reward*'), 'open') }}">
+                <a class="nav-link nav-dropdown-toggle {{ active_class(Active::checkUriPattern('admin/reward*')) }}" href="#">
+                    <i class="icon-present"></i> Rewards
+                </a>
+
+                <ul class="nav-dropdown-items">
+                    <li class="nav-item">
+                        <a class="nav-link {{ active_class(Active::checkUriPattern('admin/reward')) }}" href="{{ route('admin.reward.index') }}">
+                            <i class="icon-list"></i> Product List
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ active_class(Active::checkUriPattern('admin/reward/create')) }}" href="{{ route('admin.reward.create') }}">
+                            <i class="icon-plus"></i> Add Products
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
             {{--Products3--}}
             {{--<li class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern('admin/insurance*'), 'open') }}">--}}
                 {{--<a class="nav-link nav-dropdown-toggle {{ active_class(Active::checkUriPattern('admin/insurance*')) }}" href="#">--}}

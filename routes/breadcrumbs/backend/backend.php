@@ -81,5 +81,24 @@ Breadcrumbs::for('admin.online-training.create', function ($trail) {
 Breadcrumbs::for('admin.online-training.show', function ($trail) {
     $trail->push(__('strings.backend.products.add_product.title'), route('admin.online-training.show'));
 });
+
+// BREADCRUMS FOR REWARDS
+Breadcrumbs::for('admin.reward.index', function ($trail) {
+    $trail->push(__('Rewards'), route('admin.reward.index'));
+});
+
+Breadcrumbs::for('admin.reward.edit', function ($trail) {
+    $trail->parent('admin.reward.index');
+    $trail->push('edit', route('admin.reward.edit', ''));
+});
+
+Breadcrumbs::for('admin.reward.create', function ($trail) {
+    $trail->parent('admin.reward.index');
+    $trail->push(__('strings.backend.products.add_product.title'), route('admin.reward.create'));
+});
+
+Breadcrumbs::for('admin.reward.show', function ($trail) {
+    $trail->push(__('strings.backend.products.add_product.title'), route('admin.reward.show'));
+});
 require __DIR__.'/auth.php';
 require __DIR__.'/log-viewer.php';
