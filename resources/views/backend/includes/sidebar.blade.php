@@ -104,7 +104,7 @@
             {{--music-app--}}
             <li class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern('admin/music-app*'), 'open') }}">
                 <a class="nav-link nav-dropdown-toggle {{ active_class(Active::checkUriPattern('admin/music-app*')) }}" href="#">
-                    <i class="icon-umbrella"></i> Music Apps
+                    <i class="icon-music-tone-alt"></i> Music Apps
                 </a>
 
                 <ul class="nav-dropdown-items">
