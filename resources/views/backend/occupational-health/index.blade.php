@@ -17,5 +17,9 @@
         </thead>
     </table>
 
+    <form id="occupational_health-form" method='post' hidden>
+        <input type='hidden' name='_token' value='<?php echo csrf_token(); ?>'>
+        <input name="_method" type="hidden" value="DELETE">
+    </form>
 
 @endsection

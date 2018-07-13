@@ -5,7 +5,7 @@
 @section('content')
     <h3>Edit {{ $product->name }}</h3>
     {{--<form method="patch" enctype="multipart/form-data" action="{{ route('admin.products.update', $product->id) }}">--}}
-        {{ Form::model($product, ['route' => ['admin.insurance.update', $product->id], 'class' => '',
+        {{ Form::model($product, ['route' => ['admin.music-app.update', $product->id], 'class' => '',
          'method' => 'PATCH', 'files' => true]) }}
         {{ csrf_field() }}
         <input name="id" type="text" id="id" hidden>

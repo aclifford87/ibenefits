@@ -22,6 +22,7 @@ Breadcrumbs::for('admin.occupational-health.create', function ($trail) {
 Breadcrumbs::for('admin.occupational-health.show', function ($trail) {
     $trail->push(__('strings.backend.products.add_product.title'), route('admin.occupational-health.show'));
 });
+
 // BREADCRUMS FOR INSURANCE
 Breadcrumbs::for('admin.insurance.index', function ($trail) {
     $trail->push(__('Insurance'), route('admin.insurance.index'));
@@ -40,6 +41,26 @@ Breadcrumbs::for('admin.insurance.create', function ($trail) {
 
 Breadcrumbs::for('admin.insurance.show', function ($trail) {
     $trail->push(__('strings.backend.products.add_product.title'), route('admin.insurance.show'));
+});
+
+// BREADCRUMS FOR MUSIC APPS
+Breadcrumbs::for('admin.music-app.index', function ($trail) {
+    $trail->push(__('Music Apps'), route('admin.music-app.index'));
+});
+
+Breadcrumbs::for('admin.music-app.edit', function ($trail) {
+    $trail->parent('admin.music-app.index');
+    $trail->push('edit', route('admin.music-app.edit', ''));
+//    $trail->push(__('strings.backend.products.add_product.title'), route('admin.products.edit'));
+});
+
+Breadcrumbs::for('admin.music-app.create', function ($trail) {
+    $trail->parent('admin.music-app.index');
+    $trail->push(__('strings.backend.products.add_product.title'), route('admin.music-app.create'));
+});
+
+Breadcrumbs::for('admin.music-app.show', function ($trail) {
+    $trail->push(__('strings.backend.products.add_product.title'), route('admin.music-app.show'));
 });
 require __DIR__.'/auth.php';
 require __DIR__.'/log-viewer.php';

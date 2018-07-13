@@ -3,10 +3,10 @@
 @section('title', app_name() . ' | ' . __('strings.backend.dashboard.title'))
 
 @section('content')
-    <h3>Add a Insurance Product</h3>
+    <h3>Add a Music App Product</h3>
     {{--{{ Form::model($product, ['route' => ['admin.products.create', $product->id], 'class' => '',--}}
          {{--'method' => 'PUT', 'files' => true]) }}--}}
-    {{ Form::open(['route' => 'admin.insurance.store', 'method' => 'post', 'files' => true]) }}
+    {{ Form::open(['route' => 'admin.music-app.store', 'method' => 'post', 'files' => true]) }}
     {{--<form method="PUT" enctype="multipart/form-data" action="{{ route('admin.products.create') }}">--}}
         {{ csrf_field() }}
         <div class="form-group row">

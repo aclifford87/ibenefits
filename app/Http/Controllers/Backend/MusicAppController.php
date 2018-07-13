@@ -18,18 +18,18 @@ class MusicAppController extends Controller
      */
     public function index()
     {
-        return view('backend.insurance.index');
+        return view('backend.music-app.index');
     }
 
     public function create()
     {
-        return view('backend.insurance.create');
+        return view('backend.music-app.create');
     }
 
     public function edit($id)
     {
         $product = MusicApp::findOrFail($id);
-        return view('backend.insurance.edit', compact('product'));
+        return view('backend.music-app.edit', compact('product'));
     }
 
     public function update(Request $request, $id) {
@@ -51,7 +51,7 @@ class MusicAppController extends Controller
             $input = $request->except('image_url');
             $product->update($input);
         }
-        return redirect(route('admin.insurance.index'))->withFlashSuccess('The product was successfully edited.');
+        return redirect(route('admin.music-app.index'))->withFlashSuccess('The product was successfully edited.');
 
     }
 
@@ -73,12 +73,12 @@ class MusicAppController extends Controller
         } else{
             MusicApp::create($request->all());
         }
-        return redirect(route('admin.insurance.index'))->withFlashSuccess('The product was successfully added.');
+        return redirect(route('admin.music-app.index'))->withFlashSuccess('The product was successfully added.');
     }
 
     function destroy($id){
         $product = MusicApp::findOrFail($id);
         $product->delete();
-        return redirect(route('admin.insurance.index'))->withFlashSuccess('The product was successfully deleted.');
+        return redirect(route('admin.music-app.index'))->withFlashSuccess('The product was successfully deleted.');
     }
 }

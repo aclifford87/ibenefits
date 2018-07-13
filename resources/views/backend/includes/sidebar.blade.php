@@ -81,7 +81,7 @@
                 </ul>
             </li>
 
-            {{--Products2--}}
+            {{--Insurance--}}
             <li class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern('admin/insurance*'), 'open') }}">
                 <a class="nav-link nav-dropdown-toggle {{ active_class(Active::checkUriPattern('admin/insurance*')) }}" href="#">
                     <i class="icon-umbrella"></i> Insurance
@@ -95,6 +95,26 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {{ active_class(Active::checkUriPattern('admin/insurance/create')) }}" href="{{ route('admin.insurance.create') }}">
+                            <i class="icon-plus"></i> Add Products
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            {{--music-app--}}
+            <li class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern('admin/music-app*'), 'open') }}">
+                <a class="nav-link nav-dropdown-toggle {{ active_class(Active::checkUriPattern('admin/music-app*')) }}" href="#">
+                    <i class="icon-umbrella"></i> Music Apps
+                </a>
+
+                <ul class="nav-dropdown-items">
+                    <li class="nav-item">
+                        <a class="nav-link {{ active_class(Active::checkUriPattern('admin/music-app')) }}" href="{{ route('admin.music-app.index') }}">
+                            <i class="icon-list"></i> Product List
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ active_class(Active::checkUriPattern('admin/music-app/create')) }}" href="{{ route('admin.music-app.create') }}">
                             <i class="icon-plus"></i> Add Products
                         </a>
                     </li>

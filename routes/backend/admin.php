@@ -5,7 +5,7 @@
  */
 Route::redirect('/', '/admin/dashboard', 301);
 Route::get('dashboard', 'DashboardController@index')->name('dashboard');
-// CATEGORIES CONTROLLERS
+// CATEGORY CONTROLLERS
 Route::resource('occupational-health','OccupationalHealthController');
 Route::resource('insurance','InsuranceController');
 Route::resource('music-app','MusicAppController');
@@ -15,4 +15,7 @@ Route::get('all/products', function () {
 });
 Route::get('all/insurance', function () {
     return ['data' => \App\Models\Shop\Insurance::all()];
+});
+Route::get('all/music-app', function () {
+    return ['data' => \App\Models\Shop\MusicApp::all()];
 });
