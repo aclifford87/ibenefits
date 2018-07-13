@@ -64,7 +64,7 @@ class InsuranceController extends Controller
             $file->move($destinationPath, $filename);
 
             $product = Insurance::create([
-                'image_url' => $destinationPath . $filename,
+                'image_url' => '/' . $destinationPath . '/' . $filename,
                 'name' => $request->input('name'),
                 'description' => $request->input('description'),
                 'price' => $request->input('price'),

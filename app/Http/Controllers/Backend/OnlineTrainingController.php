@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
-use App\Models\Shop\MusicApp;
+use App\Models\Shop\OnlineTraining;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 
@@ -11,29 +11,29 @@ use Illuminate\Support\Facades\Input;
 /**
  * Class DashboardController.
  */
-class MusicAppController extends Controller
+class OnlineTrainingController extends Controller
 {
     /**
      * @return \Illuminate\View\View
      */
     public function index()
     {
-        return view('backend.music_app.index');
+        return view('backend.online_training.index');
     }
 
     public function create()
     {
-        return view('backend.music_app.create');
+        return view('backend.online_training.create');
     }
 
     public function edit($id)
     {
-        $product = MusicApp::findOrFail($id);
-        return view('backend.music_app.edit', compact('product'));
+        $product = OnlineTraining::findOrFail($id);
+        return view('backend.online_training.edit', compact('product'));
     }
 
     public function update(Request $request, $id) {
-        $product = MusicApp::find($id);
+        $product = OnlineTraining::find($id);
         If(Input::hasFile('image_url')) {
             $file = Input::file('image_url');
             $destinationPath = 'product_images';
@@ -46,12 +46,13 @@ class MusicAppController extends Controller
                 'description' => $request->input('description'),
                 'price' => $request->input('price'),
                 'visible' => $request->input('visible'),
+                'new_in' => $request->input('new_in'),
             ]);
         } else{
             $input = $request->except('image_url');
             $product->update($input);
         }
-        return redirect(route('admin.music-app.index'))->withFlashSuccess('The product was successfully edited.');
+        return redirect(route('admin.online-training.index'))->withFlashSuccess('The product was successfully edited.');
 
     }
 
@@ -63,22 +64,23 @@ class MusicAppController extends Controller
             $filename = $file->getClientOriginalName();
             $file->move($destinationPath, $filename);
 
-            $product = MusicApp::create([
+            $product = OnlineTraining::create([
                 'image_url' => '/' . $destinationPath . '/' . $filename,
                 'name' => $request->input('name'),
                 'description' => $request->input('description'),
                 'price' => $request->input('price'),
                 'visible' => $request->input('visible'),
+                'new_in' => $request->input('new_in'),
             ]);
         } else{
-            MusicApp::create($request->all());
+            OnlineTraining::create($request->all());
         }
-        return redirect(route('admin.music-app.index'))->withFlashSuccess('The product was successfully added.');
+        return redirect(route('admin.online-training.index'))->withFlashSuccess('The product was successfully added.');
     }
 
     function destroy($id){
-        $product = MusicApp::findOrFail($id);
+        $product = OnlineTraining::findOrFail($id);
         $product->delete();
-        return redirect(route('admin.music-app.index'))->withFlashSuccess('The product was successfully deleted.');
+        return redirect(route('admin.online-training.index'))->withFlashSuccess('The product was successfully deleted.');
     }
 }

@@ -121,6 +121,26 @@
                 </ul>
             </li>
 
+            {{--online-training--}}
+            <li class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern('admin/online-training*'), 'open') }}">
+                <a class="nav-link nav-dropdown-toggle {{ active_class(Active::checkUriPattern('admin/online-training*')) }}" href="#">
+                    <i class="icon-music-tone-alt"></i> Online Training
+                </a>
+
+                <ul class="nav-dropdown-items">
+                    <li class="nav-item">
+                        <a class="nav-link {{ active_class(Active::checkUriPattern('admin/online-training')) }}" href="{{ route('admin.online-training.index') }}">
+                            <i class="icon-list"></i> Product List
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ active_class(Active::checkUriPattern('admin/online-training/create')) }}" href="{{ route('admin.online-training.create') }}">
+                            <i class="icon-plus"></i> Add Products
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
             {{--Products3--}}
             {{--<li class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern('admin/insurance*'), 'open') }}">--}}
                 {{--<a class="nav-link nav-dropdown-toggle {{ active_class(Active::checkUriPattern('admin/insurance*')) }}" href="#">--}}

@@ -18,18 +18,18 @@ class OccupationalHealthController extends Controller
      */
     public function index()
     {
-        return view('backend.occupational-health.index');
+        return view('backend.occupational_health.index');
     }
 
     public function create()
     {
-        return view('backend.occupational-health.create');
+        return view('backend.occupational_health.create');
     }
 
     public function edit($id)
     {
         $product = OccupationalHealth::findOrFail($id);
-        return view('backend.occupational-health.edit', compact('product'));
+        return view('backend.occupational_health.edit', compact('product'));
     }
 
     public function update(Request $request, $id) {
@@ -64,7 +64,7 @@ class OccupationalHealthController extends Controller
             $file->move($destinationPath, $filename);
 
             $product = OccupationalHealth::create([
-                'image_url' => $destinationPath . $filename,
+                'image_url' => '/' . $destinationPath . '/' . $filename,
                 'name' => $request->input('name'),
                 'description' => $request->input('description'),
                 'price' => $request->input('price'),

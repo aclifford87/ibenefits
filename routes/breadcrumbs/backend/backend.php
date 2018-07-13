@@ -62,5 +62,24 @@ Breadcrumbs::for('admin.music-app.create', function ($trail) {
 Breadcrumbs::for('admin.music-app.show', function ($trail) {
     $trail->push(__('strings.backend.products.add_product.title'), route('admin.music-app.show'));
 });
+
+// BREADCRUMS FOR ONLINE TRAINING
+Breadcrumbs::for('admin.online-training.index', function ($trail) {
+    $trail->push(__('Online Training'), route('admin.online-training.index'));
+});
+
+Breadcrumbs::for('admin.online-training.edit', function ($trail) {
+    $trail->parent('admin.online-training.index');
+    $trail->push('edit', route('admin.online-training.edit', ''));
+});
+
+Breadcrumbs::for('admin.online-training.create', function ($trail) {
+    $trail->parent('admin.online-training.index');
+    $trail->push(__('strings.backend.products.add_product.title'), route('admin.online-training.create'));
+});
+
+Breadcrumbs::for('admin.online-training.show', function ($trail) {
+    $trail->push(__('strings.backend.products.add_product.title'), route('admin.online-training.show'));
+});
 require __DIR__.'/auth.php';
 require __DIR__.'/log-viewer.php';
