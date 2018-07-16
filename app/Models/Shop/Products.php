@@ -4,10 +4,11 @@ namespace App\Models\Shop;
 
 use Illuminate\Database\Eloquent\Model;
 
-class OccupationalHealth extends Model
+class Products extends Model
 {
     protected $table = 'products';
     protected $fillable = [
+        'category',
         'name',
         'description',
         'product_info',

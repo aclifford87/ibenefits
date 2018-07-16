@@ -3,7 +3,8 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
-use App\Models\Shop\OccupationalHealth;
+use App\Models\Shop\Categories;
+use App\Models\Shop\Products;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 
@@ -11,29 +12,30 @@ use Illuminate\Support\Facades\Input;
 /**
  * Class DashboardController.
  */
-class OccupationalHealthController extends Controller
+class ProductsController extends Controller
 {
     /**
      * @return \Illuminate\View\View
      */
     public function index()
     {
-        return view('backend.occupational_health.index');
+        return view('backend.products.index');
     }
 
     public function create()
     {
-        return view('backend.occupational_health.create');
+        $categories = Categories::all();
+        return view('backend.products.create', compact('categories'));
     }
 
     public function edit($id)
     {
-        $product = OccupationalHealth::findOrFail($id);
-        return view('backend.occupational_health.edit', compact('product'));
+        $product = Products::findOrFail($id);
+        return view('backend.products.edit', compact('product'));
     }
 
     public function update(Request $request, $id) {
-        $product = OccupationalHealth::find($id);
+        $product = Products::find($id);
         If(Input::hasFile('image_url')) {
             $file = Input::file('image_url');
             $destinationPath = 'product_images';
@@ -51,7 +53,7 @@ class OccupationalHealthController extends Controller
             $input = $request->except('image_url');
             $product->update($input);
         }
-        return redirect(route('admin.occupational-health.index'))->withFlashSuccess('The product was successfully edited.');
+        return redirect(route('admin.products.index'))->withFlashSuccess('The product was successfully edited.');
 
     }
 
@@ -63,7 +65,7 @@ class OccupationalHealthController extends Controller
             $filename = $file->getClientOriginalName();
             $file->move($destinationPath, $filename);
 
-            $product = OccupationalHealth::create([
+            $product = Products::create([
                 'image_url' => '/' . $destinationPath . '/' . $filename,
                 'name' => $request->input('name'),
                 'description' => $request->input('description'),
@@ -71,14 +73,14 @@ class OccupationalHealthController extends Controller
                 'visible' => $request->input('visible'),
             ]);
         } else{
-            OccupationalHealth::create($request->all());
+            Products::create($request->all());
         }
-        return redirect(route('admin.occupational-health.index'))->withFlashSuccess('The product was successfully added.');
+        return redirect(route('admin.products.index'))->withFlashSuccess('The product was successfully added.');
     }
 
     function destroy($id){
-        $product = OccupationalHealth::findOrFail($id);
+        $product = Products::findOrFail($id);
         $product->delete();
-        return redirect(route('admin.occupational-health.index'))->withFlashSuccess('The product was successfully deleted.');
+        return redirect(route('admin.products.index'))->withFlashSuccess('The product was successfully deleted.');
     }
 }

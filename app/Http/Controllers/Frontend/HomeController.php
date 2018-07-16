@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Shop\Insurance;
-use App\Models\Shop\OccupationalHealth;
+use App\Models\Shop\Products;
 use Carbon\Carbon;
 
 /**
@@ -21,7 +21,7 @@ private $oc_health_date = null;
     public function index()
     {
 
-        $oc_health = OccupationalHealth::where('new_in',1)->orderBy('id', 'desc')->first();
+        $oc_health = Products::where('new_in',1)->orderBy('id', 'desc')->first();
         $insurance = Insurance::where('new_in',1)->orderBy('id', 'desc')->first();
 
         return $this->fetch_records($oc_health, $insurance);

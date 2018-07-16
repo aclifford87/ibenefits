@@ -44,7 +44,7 @@ class CategoriesController extends Controller
     public function store(Request $request)
     {
         Categories::create($request->all());
-        return redirect(route('admin.categories.index'))->withFlashSuccess('The product was successfully added.');
+        return redirect(route('admin.categories.index'));
     }
 
     function destroy($id){

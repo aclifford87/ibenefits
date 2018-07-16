@@ -13,9 +13,11 @@ Route::resource('online-training','OnlineTrainingController');
 Route::resource('reward','RewardController');
 
 Route::resource('categories','CategoriesController');
+Route::resource('products','ProductsController');
+
 
 Route::get('all/products', function () {
-    return ['data' => \App\Models\Shop\OccupationalHealth::all()];
+    return ['data' => \App\Models\Shop\Products::all()];
 });
 Route::get('all/insurance', function () {
     return ['data' => \App\Models\Shop\Insurance::all()];

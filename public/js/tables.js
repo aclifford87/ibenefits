@@ -24,7 +24,7 @@ $(document).ready( function () {
         },
         "columns": [
             { "data": function (data) {
-                    return '<a href="occupational-health/'+data.id+'/edit">'+data.name+'</a>'
+                    return '<a href="products/'+data.id+'/edit">'+data.name+'</a>'
                 }, className: "centre"
             },
             { "data": function (data) {
@@ -53,7 +53,7 @@ $(document).ready( function () {
             },
 
             { "data": function (data) {
-                    return "<button onclick='delete_occupational_health_form("+data.id+")' type='submit' class='btn btn-danger'>Delete</button>"
+                    return "<button onclick='delete_products_form("+data.id+")' type='submit' class='btn btn-danger'>Delete</button>"
                 }, className: "centre"
             },
         ],
@@ -233,9 +233,9 @@ $(document).ready( function () {
     });
 });
 
-function delete_occupational_health_form(id) {
-    $("#music-app-form").attr("action", '/admin/music-app/'+id).submit()
-    console.log("deleted music id "+id+"")
+function delete_products_form(id) {
+    $("#music-app-form").attr("action", '/admin/products/'+id).submit()
+    console.log("deleted products id "+id+"")
 }
 
 function delete_music_app_form(id) {

@@ -9,7 +9,7 @@ use App\Models\Shop\Reward;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
-use App\Models\Shop\OccupationalHealth;
+use App\Models\Shop\Products;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Support\Facades\Mail;
 use PhpParser\Node\Expr\Cast\Object_;
@@ -19,7 +19,7 @@ class ShopController extends Controller
 {
     function index(){
         //get all products and services
-        $oc_health = OccupationalHealth::where('visible', 1)->get();
+        $oc_health = Products::where('visible', 1)->get();
         $insurance = Insurance::where('visible', 1)->get();
         $music_apps = MusicApp::where('visible', 1)->get();
         $online_training = OnlineTraining::where('visible', 1)->get();
@@ -40,7 +40,7 @@ class ShopController extends Controller
     }
 
     function product($id){
-        $product = OccupationalHealth::findOrFail($id);
+        $product = Products::findOrFail($id);
         return view('frontend.shop.product', compact('product'));
     }
 
@@ -50,7 +50,7 @@ class ShopController extends Controller
     }
 
     function add_cart(Request $request){
-        $product = OccupationalHealth::where('name', $request->input('name'))->get();
+        $product = Products::where('name', $request->input('name'))->get();
         $image_url = "";
         $id = "";
         foreach ($product as $prod){

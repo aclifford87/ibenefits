@@ -7,6 +7,17 @@
     {{ Form::open(['route' => 'admin.occupational-health.store', 'method' => 'post', 'files' => true]) }}
         {{ csrf_field() }}
         <div class="form-group row">
+            <label for="name" class="col-sm-2 col-form-label">Category</label>
+            <div class="col-sm-6">
+                {{--<input name="name" type="text" class="form-control" id="name" placeholder="Product Name" required>--}}
+                <select class="form-control" name="category" required>
+                    @foreach($categories as $category)
+                        <option value="{{ strtolower($category->category) }}">{{ $category->category }}</option>
+                    @endforeach
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
             <label for="name" class="col-sm-2 col-form-label">Product Name</label>
             <div class="col-sm-10">
                 <input name="name" type="text" class="form-control" id="name" placeholder="Product Name" required>
