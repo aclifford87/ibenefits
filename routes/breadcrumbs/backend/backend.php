@@ -100,5 +100,24 @@ Breadcrumbs::for('admin.reward.create', function ($trail) {
 Breadcrumbs::for('admin.reward.show', function ($trail) {
     $trail->push(__('strings.backend.products.add_product.title'), route('admin.reward.show'));
 });
+
+// BREADCRUMS FOR CATEGORIES
+Breadcrumbs::for('admin.categories.index', function ($trail) {
+    $trail->push(__('Categories'), route('admin.categories.index'));
+});
+
+Breadcrumbs::for('admin.categories.edit', function ($trail) {
+    $trail->parent('admin.categories.index');
+    $trail->push('edit', route('admin.categories.edit', ''));
+});
+
+Breadcrumbs::for('admin.categories.create', function ($trail) {
+    $trail->parent('admin.categories.index');
+    $trail->push(__('strings.backend.products.add_product.title'), route('admin.categories.create'));
+});
+
+Breadcrumbs::for('admin.categories.show', function ($trail) {
+    $trail->push(__('strings.backend.products.add_product.title'), route('admin.categories.show'));
+});
 require __DIR__.'/auth.php';
 require __DIR__.'/log-viewer.php';

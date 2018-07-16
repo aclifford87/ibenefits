@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Models\Shop\Insurance;
+use App\Models\Shop\MusicApp;
+use App\Models\Shop\OnlineTraining;
+use App\Models\Shop\Reward;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
@@ -18,8 +21,21 @@ class ShopController extends Controller
         //get all products and services
         $oc_health = OccupationalHealth::where('visible', 1)->get();
         $insurance = Insurance::where('visible', 1)->get();
-        $products = $oc_health->toBase()->merge($insurance);
-        //return $products;
+        $music_apps = MusicApp::where('visible', 1)->get();
+        $online_training = OnlineTraining::where('visible', 1)->get();
+        $rewards = Reward::where('visible', 1)->get();
+
+        $products = new \Illuminate\Database\Eloquent\Collection; //Create empty collection which we know has the merge() method
+
+        $products = $products->push($oc_health);
+        $products = $products->push($insurance);
+        $products = $products->push($music_apps);
+        $products = $products->push($online_training);
+        $products = $products->push($rewards);
+
+        //$products->toArray();
+        //$products = $oc_health->toBase()->merge($insurance);
+        return count($products);
         return view('frontend.shop.index', compact('products'));
     }
 

@@ -1,4 +1,22 @@
 $(document).ready( function () {
+    var table = $('#category').DataTable( {
+        ajax: {
+            url: 'all/categories'
+            //dataSrc: 'data'
+        },
+        "columns": [
+            { "data": function (data) {
+                    return '<a href="categories/'+data.id+'/edit">'+data.category+'</a>'
+                }, className: "centre"
+            },
+            { "data": function (data) {
+                    return "<button onclick='delete_category_form("+data.id+")' type='submit' class='btn btn-danger'>Delete</button>"
+                }, className: "centre"
+            },
+        ],
+        //select: true
+    } );
+
     var table = $('#products').DataTable( {
         ajax: {
             url: 'all/products'
@@ -215,6 +233,11 @@ $(document).ready( function () {
     });
 });
 
+function delete_occupational_health_form(id) {
+    $("#music-app-form").attr("action", '/admin/music-app/'+id).submit()
+    console.log("deleted music id "+id+"")
+}
+
 function delete_music_app_form(id) {
     $("#music-app-form").attr("action", '/admin/music-app/'+id).submit()
     console.log("deleted music id "+id+"")
@@ -232,6 +255,11 @@ function delete_online_training_form(id) {
 
 function delete_reward_form(id) {
     $("#rewards-form").attr("action", '/admin/reward/'+id+'').submit()
+    console.log("deleted online-training id "+id)
+}
+
+function delete_category_form(id) {
+    $("#category-form").attr("action", '/admin/categories/'+id+'').submit()
     console.log("deleted online-training id "+id)
 }
 

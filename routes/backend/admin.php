@@ -12,6 +12,8 @@ Route::resource('music-app','MusicAppController');
 Route::resource('online-training','OnlineTrainingController');
 Route::resource('reward','RewardController');
 
+Route::resource('categories','CategoriesController');
+
 Route::get('all/products', function () {
     return ['data' => \App\Models\Shop\OccupationalHealth::all()];
 });
@@ -26,4 +28,7 @@ Route::get('all/online-training', function () {
 });
 Route::get('all/rewards', function () {
     return ['data' => \App\Models\Shop\Reward::all()];
+});
+Route::get('all/categories', function () {
+    return ['data' => \App\Models\Shop\Categories::all()];
 });

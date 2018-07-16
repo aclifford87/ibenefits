@@ -61,6 +61,26 @@
                 </ul>
             </li>
 
+            {{--Categories--}}
+            <li class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern('admin/categories*'), 'open') }}">
+                <a class="nav-link nav-dropdown-toggle {{ active_class(Active::checkUriPattern('admin/categories*')) }}" href="#">
+                    <i class="icon-heart"></i> Categories
+                </a>
+
+                <ul class="nav-dropdown-items">
+                    <li class="nav-item">
+                        <a class="nav-link {{ active_class(Active::checkUriPattern('admin/categories')) }}" href="{{ route('admin.categories.index') }}">
+                            <i class="icon-list"></i> Category List
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ active_class(Active::checkUriPattern('admin/categories/create')) }}" href="{{ route('admin.categories.create') }}">
+                            <i class="icon-plus"></i> Add Categories
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
             {{--Products--}}
             <li class="nav-item nav-dropdown {{ active_class(Active::checkUriPattern('admin/occupational-health*'), 'open') }}">
                 <a class="nav-link nav-dropdown-toggle {{ active_class(Active::checkUriPattern('admin/occupational-health*')) }}" href="#">
