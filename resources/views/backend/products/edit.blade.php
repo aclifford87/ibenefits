@@ -5,10 +5,23 @@
 @section('content')
     <h3>Edit {{ $product->name }}</h3>
     {{--<form method="patch" enctype="multipart/form-data" action="{{ route('admin.products.update', $product->id) }}">--}}
-        {{ Form::model($product, ['route' => ['admin.occupational-health.update', $product->id], 'class' => '',
+        {{ Form::model($product, ['route' => ['admin.products.update', $product->id], 'class' => '',
          'method' => 'PATCH', 'files' => true]) }}
         {{ csrf_field() }}
         <input name="id" type="text" id="id" hidden>
+        <div class="form-group row">
+            <label for="name" class="col-sm-2 col-form-label">Category</label>
+            <div class="col-sm-6">
+                <select class="form-control" name="category" required>
+                    <option>{{ $product->category }}</option>
+                    @foreach($categories as $category)
+                        @if($product->category != $category->category)
+                        <option>{{ $category->category }}</option>
+                        @endif
+                    @endforeach
+                </select>
+            </div>
+        </div>
         <div class="form-group row">
             <label for="name" class="col-sm-2 col-form-label">Product Name</label>
             <div class="col-sm-10">

@@ -12,7 +12,7 @@
                 {{--<input name="name" type="text" class="form-control" id="name" placeholder="Product Name" required>--}}
                 <select class="form-control" name="category" required>
                     @foreach($categories as $category)
-                        <option value="{{ strtolower($category->category) }}">{{ $category->category }}</option>
+                        <option>{{ $category->category }}</option>
                     @endforeach
                 </select>
             </div>

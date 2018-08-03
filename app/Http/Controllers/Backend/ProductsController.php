@@ -24,14 +24,15 @@ class ProductsController extends Controller
 
     public function create()
     {
-        $categories = Categories::all();
+        $categories = Categories::select('category')->get();
         return view('backend.products.create', compact('categories'));
     }
 
     public function edit($id)
     {
+        $categories = Categories::select('category')->get();
         $product = Products::findOrFail($id);
-        return view('backend.products.edit', compact('product'));
+        return view('backend.products.edit', compact('product', 'categories'));
     }
 
     public function update(Request $request, $id) {

@@ -19,23 +19,9 @@ class ShopController extends Controller
 {
     function index(){
         //get all products and services
-        $oc_health = Products::where('visible', 1)->get();
-        $insurance = Insurance::where('visible', 1)->get();
-        $music_apps = MusicApp::where('visible', 1)->get();
-        $online_training = OnlineTraining::where('visible', 1)->get();
-        $rewards = Reward::where('visible', 1)->get();
+        $products = Products::where('visible', 1)->get();
 
-        $products = new \Illuminate\Database\Eloquent\Collection; //Create empty collection which we know has the merge() method
-
-        $products = $products->push($oc_health);
-        $products = $products->push($insurance);
-        $products = $products->push($music_apps);
-        $products = $products->push($online_training);
-        $products = $products->push($rewards);
-
-        //$products->toArray();
-        //$products = $oc_health->toBase()->merge($insurance);
-        return count($products);
+        //return count($products);
         return view('frontend.shop.index', compact('products'));
     }
 

@@ -8,6 +8,7 @@
         <thead>
         <tr>
             <th>Name</th>
+            <th>Category</th>
             <th>Image</th>
             <th>Price</th>
             <th>Visible</th>
