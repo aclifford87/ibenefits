@@ -4,7 +4,7 @@
 
 @section('content')
     <main role="main">
-        <div class="container pt-5">
+        <div style="margin-top: 75px" class="container pt-5">
             {{--<hr class="featurette-divider">--}}
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb bg-white">
@@ -13,9 +13,9 @@
                     <li class="breadcrumb-item active" aria-current="page">{{ $product->name }}</li>
                 </ol>
             </nav>
-            <div class="pt-2 mb-5 row">
+            <div class="pt-2 row">
                 <div class="col-sm-6 col-md-6">
-                    <img src="{{ $product->image_url }}" height="400px" width="400px">
+                    <img src="{{ $product->image_url }}" width="400px">
                 </div>
                 <div class="col-sm-6 col-md-6">
                     {{ Form::open(['route' => 'frontend.addCart', 'method' => 'post']) }}

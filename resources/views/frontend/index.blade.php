@@ -4,7 +4,7 @@
 
 @section('content')
     <main role="main">
-        <div id="myCarousel" class="carousel slide h-25 mb-4" data-ride="carousel">
+        <div id="myCarousel" class="pt-5 carousel slide h-25 mb-4" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#myCarousel" data-slide-to="1"></li>
