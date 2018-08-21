@@ -25,6 +25,10 @@
         <link href="/css/carousel.css" rel="stylesheet">
 
         <style>
+            #footer_colour {
+                background-color: #5d686e!important;
+             }
+
             .nav-tabs{
                 /*background-color:#161616;*/
             }
