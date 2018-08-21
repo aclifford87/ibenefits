@@ -3,16 +3,13 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Models\Shop\Insurance;
-use App\Models\Shop\MusicApp;
-use App\Models\Shop\OnlineTraining;
-use App\Models\Shop\Reward;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use App\Models\Shop\Products;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Support\Facades\Mail;
-use PhpParser\Node\Expr\Cast\Object_;
+
 
 
 class ShopController extends Controller

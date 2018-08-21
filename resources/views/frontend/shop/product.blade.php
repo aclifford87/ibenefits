@@ -44,28 +44,30 @@
                         @endif
                         @if(!empty($product->link_1))
                                 @if(empty($product->link_1_display))
-                                <a class="btn btn-dark" href="{{ $product->link_1 }}" target="_blank">{{ $product->link_1 }}</a>
+                                <a class="btn btn-dark" style="background-color: #2e3192" href="{{ $product->link_1 }}" target="_blank">{{ $product->link_1 }}</a>
                                 <br>
                                 @else
                                     <a class="btn btn-dark" style="background-color: #2e3192" href="{{ $product->link_1 }}">{{ $product->link_1_display }}</a>
                                     <br>
                                 @endif
                         @endif
+                            <br>
                         @if(!empty($product->link_2))
                                 @if(empty($product->link_2_display))
-                                    <a href="{{ $product->link_2 }}" target="_blank">{{ $product->link_2 }}</a>
+                                    <a class="btn btn-dark" style="background-color: #2e3192" href="{{ $product->link_2 }}" target="_blank">{{ $product->link_2 }}</a>
                                     <br>
                                 @else
-                                    <a href="{{ $product->link_2 }}">{{ $product->link_2_display }}</a>
+                                    <a class="btn btn-dark" style="background-color: #2e3192" href="{{ $product->link_2 }}" target="_blank">{{ $product->link_2_display }}</a>
                                     <br>
                                 @endif
                         @endif
+                            <br>
                         @if(!empty($product->link_3))
                                 @if(empty($product->link_3_display))
-                                    <a href="{{ $product->link_3 }}" target="_blank">{{ $product->link_3 }}</a>
+                                    <a class="btn btn-dark" style="background-color: #2e3192" href="{{ $product->link_3 }}" target="_blank">{{ $product->link_3_display }}</a>
                                     <br>
                                 @else
-                                    <a href="{{ $product->link_3 }}">{{ $product->link_3_display }}</a>
+                                    <a class="btn btn-dark" style="background-color: #2e3192" href="{{ $product->link_3 }}" target="_blank">{{ $product->link_3_display }}</a>
                                     <br>
                                 @endif
                         @endif
@@ -80,7 +82,7 @@
                 </ul>
 
                 <div class="tab-content">
-                    <div id="product-info" class="pt-3 tab-pane active">
+                    <div id="product-info" class="pt-3 tab-pane fade show active">
                     <h3>PRODUCT INFO</h3>
                     <p>{{ $product->product_info }}</p>
                     </div>
@@ -92,4 +94,5 @@
             </div>
         </div>
     </main>
+
 @endsection

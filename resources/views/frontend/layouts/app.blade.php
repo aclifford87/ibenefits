@@ -23,6 +23,27 @@
         @stack('after-styles')
         <!-- Custom styles for this template -->
         <link href="/css/carousel.css" rel="stylesheet">
+
+        <style>
+            .nav-tabs{
+                /*background-color:#161616;*/
+            }
+            .tab-content{
+                /*background-color:#303136;*/
+                /*color:#fff;*/
+                /*padding:5px*/
+            }
+            .nav-tabs > li > a{
+                background-color: #fff !important;
+                /*border: medium none;*/
+            }
+            .nav-tabs > li > a:hover, .nav-tabs > li > a:focus{
+                background-color: #2e3192 !important;
+                color:#fff !important;
+            }
+
+        </style>
+
     </head>
     <body class="mb-0 pb-0">
         <div id="app">
@@ -41,6 +62,13 @@
         @stack('after-scripts')
         <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
         <script>
+
+            // $("a[data-toggle='tab']").click(function (ev) {
+            //     $(ev.currentTarget).css('background-color', 'red');
+            //     $("a .nav-link:not('.active.show')").css('background-color', 'black')
+            //     console.log($("a .nav-link:not('.active.show')"))
+            // });
+
             function update() {
                 console.log('help')
                 $("#update").submit()

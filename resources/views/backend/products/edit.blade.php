@@ -73,6 +73,20 @@
             </div>
         </div>
         <div class="form-group row">
+            <div class="col-sm-2">Most Popular</div>
+            <div class="col-sm-10">
+                <div class="form-check">
+                    {{ Form::radio('most_popular', 1) }}
+                </div>
+            </div>
+            <div class="col-sm-2">Remove Most Popular</div>
+            <div class="col-sm-10">
+                <div class="form-check">
+                    {{ Form::radio('most_popular', 0) }}
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
             <div class="col-sm-2">Uploaded Image</div>
             <img src="{{ $product->image_url }}" height="40">
             <div class="col-sm-10">

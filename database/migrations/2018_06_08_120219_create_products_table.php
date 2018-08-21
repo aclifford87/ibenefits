@@ -15,8 +15,9 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
-            $table->text('name');
-            $table->text('description');
+            $table->string('category');
+            $table->string('name');
+            $table->text('description')->nullable();
             $table->text('product_info')->nullable();
             $table->string('url')->default('shop/product/');
             $table->string('image_url')->nullable();
@@ -29,6 +30,7 @@ class CreateProductsTable extends Migration
             $table->float('price', 8, 2)->nullable();
             $table->boolean('visible')->nullable();
             $table->boolean('new_in')->nullable();
+            $table->boolean('most_popular')->nullable();
             $table->timestamps();
         });
     }

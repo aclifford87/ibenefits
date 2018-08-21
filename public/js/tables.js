@@ -52,7 +52,15 @@ $(document).ready( function () {
                     }
                 }, className: "centre"
             },
-
+            { "data": function (data) {
+                    var new_in = data.most_popular
+                    if (new_in == "1"){
+                        return "Yes"
+                    } else {
+                        return "No"
+                    }
+                }, className: "centre"
+            },
             { "data": function (data) {
                     return "<button onclick='delete_products_form("+data.id+")' type='submit' class='btn btn-danger'>Delete</button>"
                 }, className: "centre"

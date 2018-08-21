@@ -13,6 +13,7 @@
             <th>Price</th>
             <th>Visible</th>
             <th>New In</th>
+            <th>Most Popular</th>
             <th></th>
         </tr>
         </thead>

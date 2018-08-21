@@ -16,6 +16,7 @@ class Products extends Model
         'price',
         'visible',
         'new_in',
+        'most_popular',
         'link_1',
         'link_2',
         'link_3',
