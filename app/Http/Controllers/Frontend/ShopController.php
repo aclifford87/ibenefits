@@ -63,6 +63,19 @@ class ShopController extends Controller
         return redirect()->back();
     }
 
+    function checkout(){
+        if(Auth::check()){
+            // Cart::store(auth()->id());
+            // IF BALANCE IS MORE THAN CART THEN:->
+            // MAIL BOTH ADMIN AND CUSTOMER WITH THE ORDER
+            // THEN RETURN BACK WITH MESSAGE
+            return Cart::content();
+        } else{
+            return redirect()->back()->withFlashDanger('Please login to purchase items.');
+        }
+
+    }
+
     function cashout(Request $request){
         $cashout = $request->input('cashout');
         $user = Auth::user();

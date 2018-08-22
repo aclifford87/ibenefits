@@ -18,7 +18,7 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-sm-12 col-md-10 col-md-offset-1">
+                <div class="col-sm-12 col-md-12 col-md-offset-1 table-responsive">
                     <table class="table">
                         <thead>
                         <tr>
@@ -38,9 +38,11 @@
                                         <a class="thumbnail pull-left" href="/shop/product/{{ $row->options->product_id }}">
                                             <img class="media-object" src="{{ $row->options->image_url }}" style="width: 100px; height: 100px;"> </a>
                                         <div class="media-body ml-5">
-                                            <p class="media-heading"><a href="/shop/product/{{ $row->options->product_id }}">{{ $row->name }}</a></p>
-                                            <p class="media-heading"><button onclick="update()" class="btn btn-primary">Update</button>
-                                            <a class="btn btn-danger" href="/shop/cart/remove/{{ $row->rowId }}">Remove</a></p>
+                                            <a href="/shop/product/{{ $row->options->product_id }}">{{ $row->name }}</a>
+                                            <div class="col-sm-12 col-md-12 col-lg-12">
+                                                <button onclick="update()" class="btn btn-primary">Update</button>
+                                                <a class="btn btn-danger" href="/shop/cart/remove/{{ $row->rowId }}">Remove</a>
+                                            </div>
                                         </div>
                                 </div>
                             </td>
@@ -60,9 +62,9 @@
 
                         </tr>
                         <tr>
-                            <td>   </td>
-                            <td>   </td>
-                            <td>   </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                             <td><h3>Total</h3></td>
                             <td class="text-right"><h3><strong>£{{ Cart::total() }}</strong></h3></td>
                         </tr>
@@ -70,7 +72,11 @@
                             <td>   </td>
                             <td>   </td>
                             <td>   </td>
-                            <td colspan="2"><button type="button" class="btn btn-secondary btn-lg pl-5 pr-5 w-100">Checkout</button></td>
+                            <td colspan="2">
+                                {{ Form::open(['route' => 'frontend.checkout', 'method' => 'post', 'id' => '']) }}
+                                    <button type="submit" class="btn btn-secondary btn-lg pl-5 pr-5 w-100">Checkout</button>
+                                {{ Form::close() }}
+                            </td>
                             <td></td>
                         </tr>
                         </tbody>

@@ -26,6 +26,7 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     Route::get('shop/insurance/{id}', 'ShopController@insurance')->name('insurance');
     Route::get('shop/product/cart/add', 'ShopController@add_cart')->name('add_cart');
     Route::post('shop/cart/update', 'ShopController@update')->name('updateCart');
+    Route::post('shop/cart/checkout', 'ShopController@checkout')->name('checkout');
 
     //CASH OUT
     Route::post('shop/cash/out', 'ShopController@cashout')->name('cashOut');
