@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Mail\OrderShipped;
+use App\Models\Auth\User;
 use App\Models\Shop\Insurance;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -67,12 +68,15 @@ class ShopController extends Controller
     function checkout(){
         if(Auth::check()){
             $cart =  Cart::content();
+            if(Auth::user()->balance < Cart::total() || Cart::content()->isEmpty() )
+                return redirect()->back()->withFlashDanger('You only have ' . Auth::user()->balance . ' in your account.
+                 Or your cart is empty');
             // IF BALANCE IS GREATER THAN CART THEN:->
             // MAIL BOTH ADMIN AND CUSTOMER WITH THE ORDER
             Mail::to('nick.ashford@growthpartnersplc.co.uk')->send(new OrderShipped($cart));
             // THEN DESTROY CART
+            Cart::destroy();
             // THEN RETURN BACK WITH MESSAGE
-            // Cart::destroy();
             return redirect()->back()->withFlashSuccess('Your Order has been placed.');
             //return Cart::content();
         } else{

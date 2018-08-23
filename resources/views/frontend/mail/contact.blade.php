@@ -1,3 +1,5 @@
+<body>
+<img src="{{ $message->embed('img/frontend/logo_horiz.png') }}">
 <h4>Please find your order below:</h4>
 <hr>
 @foreach($order as $item)
@@ -6,8 +8,4 @@
     <p><strong>Product Price:</strong> {{ $item->price }}</p>
     <hr>
 @endforeach
-
-{{--<p><strong>Product Name:</strong>{{ $order->name }}</p>--}}
-{{--<p><strong>Product Qyt:</strong>{{ $order->name }}</p>--}}
-{{--<p><strong>Product Cost:</strong>{{ $order->name }}</p>--}}
-{{--<p><strong>Product Name:</strong>{{ $order->name }}</p>--}}
+</body>
