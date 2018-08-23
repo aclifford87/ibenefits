@@ -73,9 +73,9 @@
             //     console.log($("a .nav-link:not('.active.show')"))
             // });
 
-            function update() {
+            function update(id) {
                 console.log('help')
-                $("#update").submit()
+                $("#"+id).submit()
             }
             function cashout() {
                 console.log('cashout')

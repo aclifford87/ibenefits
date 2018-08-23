@@ -40,7 +40,7 @@
                                         <div class="media-body ml-5">
                                             <a href="/shop/product/{{ $row->options->product_id }}">{{ $row->name }}</a>
                                             <div class="col-sm-12 col-md-12 col-lg-12">
-                                                <button onclick="update()" class="btn btn-primary">Update</button>
+                                                <button onclick="update({{ $row->options->product_id }})" class="btn btn-primary">Update</button>
                                                 <a class="btn btn-danger" href="/shop/cart/remove/{{ $row->rowId }}">Remove</a>
                                             </div>
                                         </div>
@@ -48,8 +48,7 @@
                             </td>
                             <td></td>
                             <td class="col-sm-1 col-md-1" style="text-align: center">
-                                {{ Form::open(['route' => 'frontend.updateCart', 'method' => 'post', 'id' => 'update']) }}
-
+                                {{ Form::open(['route' => 'frontend.updateCart', 'method' => 'post', 'id' => $row->options->product_id ]) }}
                                     <input type="text" class="form-control" name="qty" value="{{ $row->qty }}">
                                     <input type="text" name="rowId" value="{{ $row->rowId }}" hidden>
                                 {{ Form::close() }}

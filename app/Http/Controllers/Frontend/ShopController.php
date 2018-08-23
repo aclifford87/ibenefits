@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\Mail\OrderShipped;
 use App\Models\Shop\Insurance;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -50,7 +51,7 @@ class ShopController extends Controller
 
     function remove_from_cart($rowId){
         Cart::remove($rowId);
-        return redirect()->back()->withFlashSuccess('The product was successfully edited.');
+        return redirect()->back();
     }
 
     function cart(){
@@ -65,11 +66,15 @@ class ShopController extends Controller
 
     function checkout(){
         if(Auth::check()){
-            // Cart::store(auth()->id());
-            // IF BALANCE IS MORE THAN CART THEN:->
+            $cart =  Cart::content();
+            // IF BALANCE IS GREATER THAN CART THEN:->
             // MAIL BOTH ADMIN AND CUSTOMER WITH THE ORDER
+            Mail::to('nick.ashford@growthpartnersplc.co.uk')->send(new OrderShipped($cart));
+            // THEN DESTROY CART
             // THEN RETURN BACK WITH MESSAGE
-            return Cart::content();
+            // Cart::destroy();
+            return redirect()->back()->withFlashSuccess('Your Order has been placed.');
+            //return Cart::content();
         } else{
             return redirect()->back()->withFlashDanger('Please login to purchase items.');
         }
