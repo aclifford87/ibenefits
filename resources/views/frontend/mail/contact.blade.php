@@ -8,4 +8,5 @@
     <p><strong>Product Price:</strong> {{ $item->price }}</p>
     <hr>
 @endforeach
+<p><strong>Total:</strong> {{ Cart::total() }}</p>
 </body>

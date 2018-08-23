@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\Mail\CashOut;
 use App\Mail\OrderShipped;
 use App\Models\Auth\User;
 use App\Models\Shop\Insurance;
@@ -68,10 +69,18 @@ class ShopController extends Controller
     function checkout(){
         if(Auth::check()){
             $cart =  Cart::content();
-            if(Auth::user()->balance < Cart::total() || Cart::content()->isEmpty() )
+            // IF BALANCE IS GREATER THAN CART THEN:->
+            $cart_total = str_replace(",","",Cart::total());
+            
+            dd((float)Auth::user()->balance < $cart_total);
+            if(Auth::user()->balance < Cart::total())
                 return redirect()->back()->withFlashDanger('You only have ' . Auth::user()->balance . ' in your account.
                  Or your cart is empty');
-            // IF BALANCE IS GREATER THAN CART THEN:->
+            if(Cart::content()->isEmpty())
+                return redirect()->back()->withFlashDanger('Your cart is empty');
+
+            $new_balance = Auth::user()->balance - (int)Cart::total();
+            Auth::user()->update(['balance' => $new_balance]);
             // MAIL BOTH ADMIN AND CUSTOMER WITH THE ORDER
             Mail::to('nick.ashford@growthpartnersplc.co.uk')->send(new OrderShipped($cart));
             // THEN DESTROY CART
@@ -96,13 +105,7 @@ class ShopController extends Controller
         $new_balance = $balance - $cashout;
         $user->update(['balance' => $new_balance]);
         // SEND EMAIL
-        Mail::raw($user->first_name . ' ' . $user->last_name .
-             ' has requested £' . $cashout . ' cash out.', function($message) use ($user)
-        {
-            $message->subject('Cash Back!');
-            $message->from($user->email, 'iBenefits Shop');
-            $message->to('nick.ashford@growthpartnersplc.co.uk');
-        });
+        Mail::to('nick.ashford@growthpartnersplc.co.uk')->send(new CashOut($user, $cashout));
         return redirect()->back()->withFlashSuccess('Your request has been emailed.');
     }
 
