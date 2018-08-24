@@ -71,14 +71,13 @@ class ShopController extends Controller
             $cart =  Cart::content();
             // IF BALANCE IS GREATER THAN CART THEN:->
             $cart_total = str_replace(",","",Cart::total());
-            
-            dd((float)Auth::user()->balance < $cart_total);
-            if(Auth::user()->balance < Cart::total())
-                return redirect()->back()->withFlashDanger('You only have ' . Auth::user()->balance . ' in your account.
-                 Or your cart is empty');
-            if(Cart::content()->isEmpty())
+            //dd((float)Auth::user()->balance < $cart_total);
+            if(Auth::user()->balance < $cart_total){
+                return redirect()->back()->withFlashDanger('You only have ' . Auth::user()->balance . ' in your account.');
+            }
+            elseif (Cart::content()->isEmpty()){
                 return redirect()->back()->withFlashDanger('Your cart is empty');
-
+            }
             $new_balance = Auth::user()->balance - (int)Cart::total();
             Auth::user()->update(['balance' => $new_balance]);
             // MAIL BOTH ADMIN AND CUSTOMER WITH THE ORDER
