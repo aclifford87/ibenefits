@@ -20,9 +20,49 @@ class ShopController extends Controller
     function index(){
         //get all products and services
         $products = Products::where('visible', 1)->get();
-
+        $category = "All Products";
         //return count($products);
-        return view('frontend.shop.index', compact('products'));
+        return view('frontend.shop.index', compact('products', 'category'));
+    }
+
+    function insuranceIndex(){
+        //get all products and services
+        $products = Products::where('visible', 1)->where('category', 'insurance')->get();
+        $category = "Insurances";
+        //return count($products);
+        return view('frontend.shop.index', compact('products', 'category'));
+    }
+
+    function rewardIndex(){
+        //get all products and services
+        $products = Products::where('visible', 1)->where('category', 'reward and recognition')->get();
+        $category = "Reward and Recognition";
+        //return count($products);
+        return view('frontend.shop.index', compact('products', 'category'));
+    }
+
+    function employeeIndex(){
+        //get all products and services
+        $products = Products::where('visible', 1)->where('category', 'employee benefits')->get();
+        $category = "Employee Benefits";
+        //return count($products);
+        return view('frontend.shop.index', compact('products', 'category'));
+    }
+
+    function companyPurchasesIndex(){
+        //get all products and services
+        $products = Products::where('visible', 1)->where('category', 'company purchases')->get();
+        $category = "Company Purchases";
+        //return count($products);
+        return view('frontend.shop.index', compact('products', 'category'));
+    }
+
+    function superTreatsIndex(){
+        //get all products and services
+        $products = Products::where('visible', 1)->where('category', 'Super Treats')->get();
+        $category = "Super Treats";
+        //return count($products);
+        return view('frontend.shop.index', compact('products', 'category'));
     }
 
     function product($id){

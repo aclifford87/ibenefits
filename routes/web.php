@@ -16,6 +16,11 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     include_route_files(__DIR__.'/frontend/');
 
     Route::get('shop', 'ShopController@index')->name('shopIndex');
+    Route::get('insurance', 'ShopController@insuranceIndex')->name('insuranceIndex');
+    Route::get('reward-and-recognition', 'ShopController@rewardIndex')->name('rewardIndex');
+    Route::get('employee-benefits', 'ShopController@employeeIndex')->name('employeeIndex');
+    Route::get('super-treats', 'ShopController@superTreatsIndex')->name('superTreatsIndex');
+    Route::get('company-purchases', 'ShopController@companyPurchasesIndex')->name('companyPurchasesIndex');
 
 //    Route::get('shop/product', 'ShopController@product')->name('product');
     Route::get('shop/cart', 'ShopController@cart')->name('cart');

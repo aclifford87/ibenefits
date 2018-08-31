@@ -9,7 +9,7 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb bg-white">
                     <li class="breadcrumb-item"><a href="/">Home</a></li>
-                    <li class="breadcrumb-item"><a href="/shop">Shop</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:history.back()">{{ $product->category }}</a></li>
                     <li class="breadcrumb-item active" aria-current="page">{{ $product->name }}</li>
                 </ol>
             </nav>

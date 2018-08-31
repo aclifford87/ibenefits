@@ -69,7 +69,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-4 col-4">
                     <a href="/shop">
-                    <img class="rounded-circle float-left img-fluid"
+                        <img class="rounded-circle float-left img-fluid"
                          src="/img/frontend/all.svg"
                          alt="Generic placeholder image" width="180" height="180">
                     </a>
@@ -85,34 +85,47 @@
             <!-- START OF FEATURE OPTION LISTS 1 -->
 
             <div class="card-group">
+
                 <div class="card">
-                    <div class="card-header text-center bg-dark text-white">
-                       MUSIC APPS & SUBSCRIPTIONS
-                    </div>
-                    {{--<img class="card-img-top" src=".../100px180/" alt="Card image cap">--}}
-                    <img class="card-img-top" alt="Image cap [100%x180]" src="/img/frontend/musicapps.jpg" data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
+                    <a href="{{ route('frontend.insuranceIndex') }}" style="text-decoration: none">
+                        <div class="card-header text-center bg-dark text-white">
+                           INSURANCE
+                        </div>
+                        {{--<img class="card-img-top" src=".../100px180/" alt="Card image cap">--}}
+                        <img class="card-img-top" alt="Image cap [100%x180]" src="/img/frontend/musicapps.jpg" data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
+                    </a>
                 </div>
+
                 <div class="card">
-                    <div class="card-header text-center bg-dark text-white">
-                        REWARD & RECOGNITION
-                    </div>
-                    {{--<img class="card-img-top" src=".../100px180/" alt="Card image cap">--}}
-                    <img class="card-img-top" alt="Image cap [100%x180]" src="/img/frontend/rewards.jpg" data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
+                    <a href="{{ route('frontend.rewardIndex') }}" style="text-decoration: none">
+                        <div class="card-header text-center bg-dark text-white">
+                            REWARD & RECOGNITION
+                        </div>
+                        {{--<img class="card-img-top" src=".../100px180/" alt="Card image cap">--}}
+                        <img class="card-img-top" alt="Image cap [100%x180]" src="/img/frontend/rewards.jpg" data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
+                    </a>
                 </div>
+
                 <div class="card">
-                    <div class="card-header text-center bg-dark text-white">
-                        SALES SOFTWARE
-                    </div>
-                    {{--<img class="card-img-top" src=".../100px180/" alt="Card image cap">--}}
-                    <img class="card-img-top" alt="Image cap [100%x180]" src="/img/frontend/salessoftware.jpg" data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
+                    <a href="{{ route('frontend.employeeIndex') }}" style="text-decoration: none">
+                        <div class="card-header text-center bg-dark text-white">
+                            EMPLOYEE BENEFITS
+                        </div>
+                        {{--<img class="card-img-top" src=".../100px180/" alt="Card image cap">--}}
+                        <img class="card-img-top" alt="Image cap [100%x180]" src="/img/frontend/salessoftware.jpg" data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
+                    </a>
                 </div>
+
                 <div class="card">
-                    <div class="card-header text-center bg-dark text-white">
-                        HEALTH CARE PLANS
-                    </div>
-                    {{--<img class="card-img-top" src=".../100px180/" alt="Card image cap">--}}
-                    <img class="card-img-top" alt="Image cap [100%x180]" src="/img/frontend/healthcare.jpg" data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
+                    <a href="{{ route('frontend.superTreatsIndex') }}" style="text-decoration: none">
+                        <div class="card-header text-center bg-dark text-white">
+                            SUPER TREATS
+                        </div>
+                        {{--<img class="card-img-top" src=".../100px180/" alt="Card image cap">--}}
+                        <img class="card-img-top" alt="Image cap [100%x180]" src="/img/frontend/healthcare.jpg" data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
+                    </a>
                 </div>
+
             </div>
 
             <!-- END OF FEATURE OPTION LISTS 1 -->
