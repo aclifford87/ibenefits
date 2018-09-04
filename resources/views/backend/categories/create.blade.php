@@ -16,7 +16,7 @@
 
         <div class="form-group row">
             <div class="col-sm-10">
-                <button type="submit" class="btn btn-primary">Add Product</button>
+                <button type="submit" class="btn btn-primary">Add Category</button>
             </div>
         </div>
     </form>
