@@ -26,6 +26,125 @@
         <link href="/css/carousel.css" rel="stylesheet">
 
         <style>
+            .carousel-inner{
+                margin-top: 120px;
+                width:100%;
+                max-height: 300px !important;
+            }
+            .carousel-item > img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                min-width: 100%;
+                height: 300px;
+            }
+            .carousel-caption {
+                color: #2e3192;
+                /*font-size: 12px;*/
+                bottom: 14rem;
+                z-index: 10;
+            }
+
+            /* Smaller than standard 960 (devices and browsers) */
+            @media only screen and (max-width: 959px) {
+                .carousel-inner{
+                    margin-top: 120px;
+                    width:100%;
+                    max-height: 150px !important;
+                }
+                .carousel-item > img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    min-width: 100%;
+                    height: 150px;
+                }
+                .carousel-caption {
+                    color: #2e3192;
+                    /*font-size: 12px;*/
+                    bottom: 14rem;
+                    z-index: 10;
+                }
+            }
+
+            /* Tablet Portrait size to standard 960 (devices and browsers) */
+            @media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+            /* All Mobile Sizes (devices and browser) */
+            @media only screen and (max-width: 767px) {
+                .carousel-inner{
+                    margin-top: 120px;
+                    width:100%;
+                    max-height: 100px !important;
+                }
+                .carousel-item > img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    min-width: 100%;
+                    height: 100px;
+                }
+                .carousel-caption {
+                    color: #2e3192;
+                    /*font-size: 8px;*/
+                    bottom: 18rem;
+                    z-index: 10;
+                }
+                .carousel-caption > h1{
+                    font-size: 12px;
+                }
+            }
+
+            /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+            @media only screen and (min-width: 480px) and (max-width: 767px) {
+                .carousel-inner{
+                    margin-top: 120px;
+                    width:100%;
+                    max-height: 100px !important;
+                }
+                .carousel-item > img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    min-width: 100%;
+                    height: 100px;
+                }
+                .carousel-caption {
+                    color: #2e3192;
+                    /*font-size: 8px;*/
+                    bottom: 18rem;
+                    z-index: 10;
+                }
+                .carousel-caption > h1 {
+                    font-size: 18px;
+                }
+            }
+
+            /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+            @media only screen and (max-width: 479px) {
+                .carousel-inner{
+                    margin-top: 120px;
+                    width:100%;
+                    max-height: 100px !important;
+                }
+                .carousel-item > img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    min-width: 100%;
+                    height: 100px;
+                }
+                .carousel-caption {
+                    color: #2e3192;
+                    /*font-size: 8px;*/
+                    bottom: 18rem;
+                    z-index: 10;
+                }
+                .carousel-caption > h1 {
+                    font-size: 18px;
+                }
+            }
+
             #footer_colour {
                 background-color: #5d686e!important;
              }

@@ -4,7 +4,7 @@
 
 @section('content')
     <main role="main">
-        <div id="myCarousel" class="pt-5 carousel slide h-25 mb-4" data-ride="carousel">
+        <div id="myCarousel" class=" carousel slide  mb-4" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -13,16 +13,16 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="first-slide" src="/img/frontend/carousel/healthcare.jpg" alt="First slide">
+                    <img class="d-block w-100" src="/img/frontend/carousel/healthcareb.jpg" alt="First slide">
                     <div class="container">
-                        <div class="carousel-caption offset-lg-5 offset-sm-0">
+                        <div class="carousel-caption">
                             <h1>HEALTHCARE</h1>
                             <p>From The Best Providers</p>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="second-slide" src="/img/frontend/carousel/salessoftware.jpg" alt="Second slide">
+                    <img class="d-block w-100" src="/img/frontend/carousel/HRsoftware.jpg" alt="Second slide">
                     <div class="container">
                         <div class="carousel-caption">
                             <h1>HR SOFTWARE</h1>
@@ -31,7 +31,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+                    <img class="d-block w-100" src="/img/frontend/carousel/training.jpg" alt="Third slide">
                     <div class="container">
                         <div class="carousel-caption">
                             <h1>ONLINE TRAINING COURSES</h1>
@@ -40,7 +40,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="fourth-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Fourth slide">
+                    <img class="d-block w-100" src="/img/frontend/carousel/personal_development.jpg" alt="Fourth slide">
                     <div class="container">
                         <div class="carousel-caption">
                             <h1>PERSONAL DEVELOPMENT</h1>
