@@ -35,7 +35,7 @@
                     <div class="container">
                         <div class="carousel-caption">
                             <h1>ONLINE TRAINING COURSES</h1>
-                            <p>Insert image</p>
+                            <p>Insert Text</p>
                         </div>
                     </div>
                 </div>
@@ -44,7 +44,7 @@
                     <div class="container">
                         <div class="carousel-caption">
                             <h1>PERSONAL DEVELOPMENT</h1>
-                            <p>Insert image</p>
+                            <p>Insert Text</p>
                         </div>
                     </div>
                 </div>
