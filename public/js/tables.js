@@ -243,7 +243,7 @@ $(document).ready( function () {
 });
 
 function delete_products_form(id) {
-    $("#music-app-form").attr("action", '/admin/products/'+id).submit()
+    $("#product-form").attr("action", '/admin/products/'+id).submit()
     console.log("deleted products id "+id+"")
 }
 
