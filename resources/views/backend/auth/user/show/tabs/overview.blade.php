@@ -12,6 +12,11 @@
             </tr>
 
             <tr>
+                <th>Company</th>
+                <td>{{ $user->company }}</td>
+            </tr>
+
+            <tr>
                 <th>{{ __('labels.backend.access.users.tabs.content.overview.email') }}</th>
                 <td>{{ $user->email }}</td>
             </tr>

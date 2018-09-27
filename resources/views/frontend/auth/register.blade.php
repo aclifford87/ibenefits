@@ -56,6 +56,34 @@
                         <div class="row">
                             <div class="col">
                                 <div class="form-group">
+                                    {{ html()->label('Company')->for('company') }}
+
+                                    {{ html()->text('company')
+                                        ->class('form-control')
+                                        ->placeholder('Company')
+                                        ->attribute('maxlength', 191)
+                                        ->required() }}
+                                </div><!--form-group-->
+                            </div><!--col-->
+                        </div><!--row-->
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                {{ html()->label('Tel')->for('tel') }}
+
+                                {{ html()->text('tel')
+                                    ->class('form-control')
+                                    ->placeholder('Telephone')
+                                    ->attribute('maxlength', 191)
+                                    ->required() }}
+                            </div><!--form-group-->
+                        </div><!--col-->
+                    </div><!--row-->
+
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
                                     {{ html()->label(__('validation.attributes.frontend.password'))->for('password') }}
 
                                     {{ html()->password('password')

@@ -29,6 +29,7 @@
                         <tr>
                             <th>{{ __('labels.backend.access.users.table.last_name') }}</th>
                             <th>{{ __('labels.backend.access.users.table.first_name') }}</th>
+                            <th>Company</th>
                             <th>{{ __('labels.backend.access.users.table.email') }}</th>
                             <th>{{ __('labels.backend.access.users.table.confirmed') }}</th>
                             <th>{{ __('labels.backend.access.users.table.roles') }}</th>
@@ -44,6 +45,7 @@
                             <tr>
                                 <td>{{ $user->last_name }}</td>
                                 <td>{{ $user->first_name }}</td>
+                                <td>{{ $user->company }}</td>
                                 <td>{{ $user->email }}</td>
                                 <td>{!! $user->confirmed_label !!}</td>
                                 <td>{!! $user->roles_label !!}</td>

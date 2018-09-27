@@ -104,6 +104,7 @@ class UserRepository extends BaseRepository
                 'first_name' => $data['first_name'],
                 'last_name' => $data['last_name'],
                 'email' => $data['email'],
+                'company' => $data['company'],
                 'timezone' => $data['timezone'],
                 'password' => $data['password'],
                 'active' => isset($data['active']) && $data['active'] == '1' ? 1 : 0,
@@ -162,6 +163,7 @@ class UserRepository extends BaseRepository
             if ($user->update([
                 'first_name' => $data['first_name'],
                 'last_name' => $data['last_name'],
+                'company' => $data['company'],
                 'email' => $data['email'],
                 'balance' => $data['balance'],
                 'timezone' => $data['timezone'],
