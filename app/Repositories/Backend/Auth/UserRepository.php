@@ -164,6 +164,7 @@ class UserRepository extends BaseRepository
                 'first_name' => $data['first_name'],
                 'last_name' => $data['last_name'],
                 'company' => $data['company'],
+                'tel' => $data['tel'],
                 'email' => $data['email'],
                 'balance' => $data['balance'],
                 'timezone' => $data['timezone'],
@@ -251,7 +252,7 @@ class UserRepository extends BaseRepository
 
             // Let user know their account was approved
             if (config('access.users.requires_approval')) {
-                $user->notify(new UserAccountActive);
+//                $user->notify(new UserAccountActive);
             }
 
             return $user;

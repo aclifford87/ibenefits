@@ -126,6 +126,7 @@ class UserController extends Controller
             'first_name',
             'last_name',
             'company',
+            'tel',
             'email',
             'balance',
             'timezone',

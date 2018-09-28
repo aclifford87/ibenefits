@@ -60,6 +60,18 @@
                     </div><!--form-group-->
 
                     <div class="form-group row">
+                        {{ html()->label('Telephone')->class('col-md-2 form-control-label')->for('tel') }}
+
+                        <div class="col-md-10">
+                            {{ html()->text('tel')
+                                ->class('form-control')
+                                ->placeholder('Telephone')
+                                ->attribute('maxlength', 191)
+                                ->required() }}
+                        </div><!--col-->
+                    </div><!--form-group-->
+
+                    <div class="form-group row">
                         {{ html()->label(__('validation.attributes.backend.access.users.email'))->class('col-md-2 form-control-label')->for('email') }}
 
                         <div class="col-md-10">

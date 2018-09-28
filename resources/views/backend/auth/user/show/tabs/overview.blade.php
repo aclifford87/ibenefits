@@ -17,6 +17,11 @@
             </tr>
 
             <tr>
+                <th>Telephone</th>
+                <td>{{ $user->tel }}</td>
+            </tr>
+
+            <tr>
                 <th>{{ __('labels.backend.access.users.tabs.content.overview.email') }}</th>
                 <td>{{ $user->email }}</td>
             </tr>
