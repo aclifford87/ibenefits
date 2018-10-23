@@ -8,14 +8,14 @@
             {{--<hr class="featurette-divider">--}}
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb bg-white">
-                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item"><a href="{{ url('/') }}">Home</a></li>
                     <li class="breadcrumb-item"><a href="javascript:history.back()">{{ $product->category }}</a></li>
                     <li class="breadcrumb-item active" aria-current="page">{{ $product->name }}</li>
                 </ol>
             </nav>
             <div class="pt-2 row">
                 <div class="col-sm-6 col-md-6">
-                    <img src="{{ $product->image_url }}" width="400px">
+                    <img src="{{ url($product->image_url) }}" width="400px">
                 </div>
                 <div class="col-sm-6 col-md-6">
                     {{ Form::open(['route' => 'frontend.addCart', 'method' => 'post']) }}
@@ -43,33 +43,39 @@
                             {{--<h3>PDF Links</h3>--}}
                         @endif
                         @if(!empty($product->link_1))
-                                @if(empty($product->link_1_display))
-                                <a class="btn btn-dark" style="background-color: #2e3192" href="{{ $product->link_1 }}" target="_blank">{{ $product->link_1 }}</a>
+                            @if(empty($product->link_1_display))
+                                <a class="btn btn-dark" style="background-color: #2e3192" href="{{ $product->link_1 }}"
+                                   target="_blank">{{ $product->link_1 }}</a>
                                 <br>
-                                @else
-                                    <a class="btn btn-dark" style="background-color: #2e3192" href="{{ $product->link_1 }}">{{ $product->link_1_display }}</a>
-                                    <br>
-                                @endif
+                            @else
+                                <a class="btn btn-dark" style="background-color: #2e3192"
+                                   href="{{ $product->link_1 }}">{{ $product->link_1_display }}</a>
+                                <br>
+                            @endif
                         @endif
-                            <br>
+                        <br>
                         @if(!empty($product->link_2))
-                                @if(empty($product->link_2_display))
-                                    <a class="btn btn-dark" style="background-color: #2e3192" href="{{ $product->link_2 }}" target="_blank">{{ $product->link_2 }}</a>
-                                    <br>
-                                @else
-                                    <a class="btn btn-dark" style="background-color: #2e3192" href="{{ $product->link_2 }}" target="_blank">{{ $product->link_2_display }}</a>
-                                    <br>
-                                @endif
+                            @if(empty($product->link_2_display))
+                                <a class="btn btn-dark" style="background-color: #2e3192" href="{{ $product->link_2 }}"
+                                   target="_blank">{{ $product->link_2 }}</a>
+                                <br>
+                            @else
+                                <a class="btn btn-dark" style="background-color: #2e3192" href="{{ $product->link_2 }}"
+                                   target="_blank">{{ $product->link_2_display }}</a>
+                                <br>
+                            @endif
                         @endif
-                            <br>
+                        <br>
                         @if(!empty($product->link_3))
-                                @if(empty($product->link_3_display))
-                                    <a class="btn btn-dark" style="background-color: #2e3192" href="{{ $product->link_3 }}" target="_blank">{{ $product->link_3_display }}</a>
-                                    <br>
-                                @else
-                                    <a class="btn btn-dark" style="background-color: #2e3192" href="{{ $product->link_3 }}" target="_blank">{{ $product->link_3_display }}</a>
-                                    <br>
-                                @endif
+                            @if(empty($product->link_3_display))
+                                <a class="btn btn-dark" style="background-color: #2e3192" href="{{ $product->link_3 }}"
+                                   target="_blank">{{ $product->link_3_display }}</a>
+                                <br>
+                            @else
+                                <a class="btn btn-dark" style="background-color: #2e3192" href="{{ $product->link_3 }}"
+                                   target="_blank">{{ $product->link_3_display }}</a>
+                                <br>
+                            @endif
                         @endif
                     </div>
                 </div>
@@ -77,18 +83,26 @@
 
             <div class="container mb-5">
                 <ul class="nav nav-tabs">
-                    <li class="active"><a class="nav-link active" data-toggle="tab" href="#product-info">PRODUCT INFO</a></li>
+                    <li class="active"><a class="nav-link active" data-toggle="tab" href="#product-info">PRODUCT
+                            INFO</a></li>
                     <li><a class="nav-link" data-toggle="tab" href="#returns">RETURN AND REFUND POLICY</a></li>
                 </ul>
 
                 <div class="tab-content">
                     <div id="product-info" class="pt-3 tab-pane fade show active">
-                    <h3>PRODUCT INFO</h3>
-                    <p>{{ $product->product_info }}</p>
+                        <h3>PRODUCT INFO</h3>
+                        <p>{{ $product->product_info }}</p>
                     </div>
                     <div id="returns" class="pt-3 tab-pane fade">
-                    <h3>RETURN AND REFUND POLICY</h3>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Nam iaculis bibendum est, nec interdum metus convallis vel. Etiam sit amet ipsum in ante lobortis consectetur vel eu nisi. Etiam porttitor risus vel porta laoreet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi viverra eu leo ut cursus. Donec convallis justo ut metus tristique tincidunt. Nunc id sagittis libero. Duis eu porta neque. Pellentesque eu rhoncus dolor. Nunc tempor molestie dolor, id ultricies ipsum condimentum non. Aenean non vehicula augue, vitae feugiat elit.</p>
+                        <h3>RETURN AND REFUND POLICY</h3>
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                            commodo consequat. Nam iaculis bibendum est, nec interdum metus convallis vel. Etiam sit
+                            amet ipsum in ante lobortis consectetur vel eu nisi. Etiam porttitor risus vel porta
+                            laoreet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+                            turpis egestas. Morbi viverra eu leo ut cursus. Donec convallis justo ut metus tristique
+                            tincidunt. Nunc id sagittis libero. Duis eu porta neque. Pellentesque eu rhoncus dolor. Nunc
+                            tempor molestie dolor, id ultricies ipsum condimentum non. Aenean non vehicula augue, vitae
+                            feugiat elit.</p>
                     </div>
                 </div>
             </div>

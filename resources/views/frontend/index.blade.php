@@ -13,7 +13,8 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" src="/img/frontend/carousel/healthcareb.jpg" alt="First slide">
+                    <img class="d-block w-100" src="{{url ('img/frontend/carousel/healthcareb.jpg')}}"
+                         alt="First slide">
                     <div class="container">
                         <div class="carousel-caption">
                             <h1>HEALTHCARE</h1>
@@ -22,7 +23,8 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="/img/frontend/carousel/HRsoftware.jpg" alt="Second slide">
+                    <img class="d-block w-100" src="{{url ('img/frontend/carousel/HRsoftware.jpg') }}"
+                         alt="Second slide">
                     <div class="container">
                         <div class="carousel-caption">
                             <h1>HR SOFTWARE</h1>
@@ -31,7 +33,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="/img/frontend/carousel/training.jpg" alt="Third slide">
+                    <img class="d-block w-100" src="{{url ('img/frontend/carousel/training.jpg') }}" alt="Third slide">
                     <div class="container">
                         <div class="carousel-caption">
                             <h1>ONLINE TRAINING COURSES</h1>
@@ -40,7 +42,8 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="/img/frontend/carousel/personal_development.jpg" alt="Fourth slide">
+                    <img class="d-block w-100" src="{{url ('img/frontend/carousel/personal_development.jpg') }}"
+                         alt="Fourth slide">
                     <div class="container">
                         <div class="carousel-caption">
                             <h1>PERSONAL DEVELOPMENT</h1>
@@ -68,17 +71,19 @@
             <!-- Three columns of text below the carousel -->
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-4 col-4">
-                    <a href="/shop">
+                    <a href="shop">
                         <img class="rounded-circle float-left img-fluid"
-                         src="/img/frontend/all.svg"
-                         alt="Generic placeholder image" width="180" height="180">
+                             src="{{url ('img/frontend/all.svg') }}"
+                             alt="Generic placeholder image" width="180" height="180">
                     </a>
                 </div><!-- /.col-lg-4 -->
                 <div class="col-lg-4 col-md-4 col-sm-4 col-4">
-                    <img class="rounded-circle img-fluid" src="/img/frontend/training.svg" alt="Generic placeholder image" width="180" height="180">
+                    <img class="rounded-circle img-fluid" src="{{url ('img/frontend/training.svg') }}"
+                         alt="Generic placeholder image" width="180" height="180">
                 </div><!-- /.col-lg-4 -->
                 <div class="col-lg-4 col-md-4 col-sm-4 col-4">
-                    <img class="rounded-circle float-right img-fluid" src="/img/frontend/concierge.svg" alt="Generic placeholder image" width="180" height="180">
+                    <img class="rounded-circle float-right img-fluid" src="{{url ('img/frontend/concierge.svg') }}"
+                         alt="Generic placeholder image" width="180" height="180">
                 </div><!-- /.col-lg-4 -->
             </div><!-- /.row -->
 
@@ -89,10 +94,12 @@
                 <div class="card">
                     <a href="{{ route('frontend.insuranceIndex') }}" style="text-decoration: none">
                         <div class="card-header text-center bg-dark text-white">
-                           INSURANCE
+                            INSURANCE
                         </div>
                         {{--<img class="card-img-top" src=".../100px180/" alt="Card image cap">--}}
-                        <img class="card-img-top" alt="Image cap [100%x180]" src="/img/frontend/musicapps.jpg" data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
+                        <img class="card-img-top" alt="Image cap [100%x180]"
+                             src="{{url ('img/frontend/musicapps.jpg') }}"
+                             data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
                     </a>
                 </div>
 
@@ -102,7 +109,8 @@
                             REWARD & RECOGNITION
                         </div>
                         {{--<img class="card-img-top" src=".../100px180/" alt="Card image cap">--}}
-                        <img class="card-img-top" alt="Image cap [100%x180]" src="/img/frontend/rewards.jpg" data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
+                        <img class="card-img-top" alt="Image cap [100%x180]" src="{{url ('img/frontend/rewards.jpg') }}"
+                             data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
                     </a>
                 </div>
 
@@ -112,7 +120,9 @@
                             EMPLOYEE BENEFITS
                         </div>
                         {{--<img class="card-img-top" src=".../100px180/" alt="Card image cap">--}}
-                        <img class="card-img-top" alt="Image cap [100%x180]" src="/img/frontend/salessoftware.jpg" data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
+                        <img class="card-img-top" alt="Image cap [100%x180]"
+                             src="{{url ('img/frontend/salessoftware.jpg') }}"
+                             data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
                     </a>
                 </div>
 
@@ -122,7 +132,9 @@
                             SUPER TREATS
                         </div>
                         {{--<img class="card-img-top" src=".../100px180/" alt="Card image cap">--}}
-                        <img class="card-img-top" alt="Image cap [100%x180]" src="/img/frontend/healthcare.jpg" data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
+                        <img class="card-img-top" alt="Image cap [100%x180]"
+                             src="{{url ('img/frontend/healthcare.jpg') }}"
+                             data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
                     </a>
                 </div>
 
@@ -138,7 +150,8 @@
                         <div class="card-header text-center bg-dark text-white">
                             MOST POPULAR
                         </div>
-                        <img class="card-img-top" alt="Image cap [100%x180]" src="{{ $most_popular->image_url }}" data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
+                        <img class="card-img-top" alt="Image cap [100%x180]" src="{{ url( $most_popular->image_url) }}"
+                             data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
                     </a>
                 </div>
 
@@ -147,7 +160,8 @@
                         <div class="card-header text-center bg-dark text-white">
                             NEW THIS MONTH
                         </div>
-                        <img class="card-img-top" alt="Image cap [100%x180]" src="{{ $new_in->image_url }}" data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
+                        <img class="card-img-top" alt="Image cap [100%x180]" src="{{url ($new_in->image_url) }}"
+                             data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">)
                     </a>
                 </div>
             </div>
@@ -158,46 +172,46 @@
 
             <!-- START THE FEATURETTES -->
 
-            {{--<hr class="featurette-divider">--}}
+        {{--<hr class="featurette-divider">--}}
 
-            {{--<div class="row featurette">--}}
-                {{--<div class="col-md-7">--}}
-                    {{--<h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>--}}
-                    {{--<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>--}}
-                {{--</div>--}}
-                {{--<div class="col-md-5">--}}
-                    {{--<img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" style="width: 500px; height: 500px;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_163dad36013%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_163dad36013%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.125%22%20y%3D%22261.1%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">--}}
-                {{--</div>--}}
-            {{--</div>--}}
+        {{--<div class="row featurette">--}}
+        {{--<div class="col-md-7">--}}
+        {{--<h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>--}}
+        {{--<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>--}}
+        {{--</div>--}}
+        {{--<div class="col-md-5">--}}
+        {{--<img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" style="width: 500px; height: 500px;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_163dad36013%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_163dad36013%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.125%22%20y%3D%22261.1%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">--}}
+        {{--</div>--}}
+        {{--</div>--}}
 
-            {{--<hr class="featurette-divider">--}}
+        {{--<hr class="featurette-divider">--}}
 
-            {{--<div class="row featurette">--}}
-                {{--<div class="col-md-7 order-md-2">--}}
-                    {{--<h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>--}}
-                    {{--<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>--}}
-                {{--</div>--}}
-                {{--<div class="col-md-5 order-md-1">--}}
-                    {{--<img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" style="width: 500px; height: 500px;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_163dad36013%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_163dad36013%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.125%22%20y%3D%22261.1%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">--}}
-                {{--</div>--}}
-            {{--</div>--}}
+        {{--<div class="row featurette">--}}
+        {{--<div class="col-md-7 order-md-2">--}}
+        {{--<h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>--}}
+        {{--<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>--}}
+        {{--</div>--}}
+        {{--<div class="col-md-5 order-md-1">--}}
+        {{--<img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" style="width: 500px; height: 500px;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_163dad36013%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_163dad36013%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.125%22%20y%3D%22261.1%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">--}}
+        {{--</div>--}}
+        {{--</div>--}}
 
-            {{--<hr class="featurette-divider">--}}
+        {{--<hr class="featurette-divider">--}}
 
-            {{--<div class="row featurette">--}}
-                {{--<div class="col-md-7">--}}
-                    {{--<h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>--}}
-                    {{--<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>--}}
-                {{--</div>--}}
-                {{--<div class="col-md-5">--}}
-                    {{--<img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" style="width: 500px; height: 500px;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_163dad36013%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_163dad36013%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.125%22%20y%3D%22261.1%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">--}}
-                    {{--<img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">--}}
-                {{--</div>--}}
-            {{--</div>--}}
+        {{--<div class="row featurette">--}}
+        {{--<div class="col-md-7">--}}
+        {{--<h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>--}}
+        {{--<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>--}}
+        {{--</div>--}}
+        {{--<div class="col-md-5">--}}
+        {{--<img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" style="width: 500px; height: 500px;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_163dad36013%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_163dad36013%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.125%22%20y%3D%22261.1%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">--}}
+        {{--<img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">--}}
+        {{--</div>--}}
+        {{--</div>--}}
 
-            {{--<hr class="featurette-divider">--}}
+        {{--<hr class="featurette-divider">--}}
 
-            <!-- /END THE FEATURETTES -->
+        <!-- /END THE FEATURETTES -->
 
         </div><!-- /.container -->
 
